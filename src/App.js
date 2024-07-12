@@ -3,7 +3,7 @@ import { BrowserRouter as Router, NavLink, Routes, Route, useNavigate } from 're
 import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
 import styled, { keyframes } from 'styled-components';
-import './App.css'; // Create this CSS file for custom styles
+import './App.css';
 import About from './components/About';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
@@ -20,7 +20,10 @@ const fadeInUp = keyframes`
 `;
 
 const AppContainer = styled.div`
-  background-color: ${props => (props.isDarkMode ? '#080a09' : '#ffffff')};
+  background-image: url('/images/images.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: ${props => (props.isDarkMode ? '#ffffff' : '#000000')};
   min-height: 100vh;
   transition: all 0.3s;
@@ -33,8 +36,14 @@ const Navbar = styled.nav`
   justify-content: center;
   padding: 20px;
   border-bottom: ${props => (props.isDarkMode ? 'none' : '1px solid #eaeaea')};
-  background-color: ${props => (props.isDarkMode ? '#080a09' : '#ffffff')};
+  background-color: ${props => (props.isDarkMode ? 'rgba(8, 10, 9, 0.8)' : 'rgba(255, 255, 255, 0.8)')};
   animation: ${fadeInUp} 0.5s ease-in-out;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    display: ${props => (props.isMenuOpen ? 'flex' : 'none')};
+  }
 `;
 
 const Navlink = styled(NavLink)`
@@ -49,6 +58,10 @@ const Navlink = styled(NavLink)`
     text-decoration-color: red;
     text-decoration-thickness: 3px;
   }
+
+  @media (max-width: 768px) {
+    margin: 10px 0;
+  }
 `;
 
 const ToggleButton = styled.div`
@@ -56,6 +69,23 @@ const ToggleButton = styled.div`
   top: 10px;
   right: 10px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    top: 20px;
+    right: 20px;
+  }
+`;
+
+const MenuButton = styled.div`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const HomeContainer = styled.div`
@@ -65,24 +95,37 @@ const HomeContainer = styled.div`
   align-items: flex-start;
   padding: 40px;
   height: 100vh;
-  background-color: ${props => (props.isDarkMode ? '#080a09' : '#ffffff')};
+  background-color: ${props => (props.isDarkMode ? 'rgba(8, 10, 9, 0.8)' : 'rgba(255, 255, 255, 0.8)')};
   color: ${props => (props.isDarkMode ? '#ffffff' : '#000000')};
   transition: all 0.3s;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 20px;
+  }
 `;
 
 const TextContainer = styled.div`
   flex: 1;
   padding-right: 20px;
+
+  @media (max-width: 1024px) {
+    padding-right: 0;
+  }
 `;
 
 const ImageContainer = styled.div`
   flex: 1;
   height: 400px;
-  background-color: ${props => (props.isDarkMode ? '#080a09' : '#ffffff')};
+  background-color: ${props => (props.isDarkMode ? 'rgba(8, 10, 9, 0.8)' : 'rgba(255, 255, 255, 0.8)')};
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top:140px;
+  padding-top: 140px;
+
+  @media (max-width: 1024px) {
+    padding-top: 20px;
+  }
 `;
 
 const fadeIn = keyframes`
@@ -97,6 +140,10 @@ const Title = styled.h1`
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
   animation-delay: 0s;
+
+  @media (max-width: 768px) {
+    font-size: 3em;
+  }
 `;
 
 const Subtitle = styled.h2`
@@ -105,6 +152,10 @@ const Subtitle = styled.h2`
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
   animation-delay: 1s;
+
+  @media (max-width: 768px) {
+    font-size: 2em;
+  }
 `;
 
 const Description = styled.h3`
@@ -113,6 +164,10 @@ const Description = styled.h3`
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
   animation-delay: 2s;
+
+  @media (max-width: 768px) {
+    font-size: 1.5em;
+  }
 `;
 
 const DetailedDescription = styled.p`
@@ -121,6 +176,10 @@ const DetailedDescription = styled.p`
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
   animation-delay: 3s;
+
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
 `;
 
 const Home = ({ isDarkMode }) => {
@@ -137,14 +196,14 @@ const Home = ({ isDarkMode }) => {
         </DetailedDescription>
       </TextContainer>
       <ImageContainer isDarkMode={isDarkMode}>
-        <img src="/images/QVCSS.png" alt="QVCSS" style={{ maxWidth: '100%', maxHeight: '100%', backgroundColor: isDarkMode ? '#080a09' : '#ffffff' }} />
+        <img src="/images/QVCSS.png" alt="QVCSS" style={{ maxWidth: '100%', maxHeight: '100%', backgroundColor: 'transparent' }} />
       </ImageContainer>
     </HomeContainer>
   );
 };
 
 const PageContainer = styled.div`
-  background-color: ${props => (props.isDarkMode ? '#080a09' : '#ffffff')};
+  background-color: ${props => (props.isDarkMode ? 'rgba(8, 10, 9, 0.8)' : 'rgba(255, 255, 255, 0.8)')};
   color: ${props => (props.isDarkMode ? '#ffffff' : '#000000')};
   min-height: 100vh;
   transition: all 0.3s;
@@ -154,10 +213,15 @@ const PageContainer = styled.div`
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const handleNavigation = async (e, path) => {
@@ -177,7 +241,10 @@ const App = () => {
           aria-label="Dark mode toggle"
         />
       </ToggleButton>
-      <Navbar isDarkMode={isDarkMode}>
+      <MenuButton onClick={toggleMenu}>
+        <span role="img" aria-label="menu">🍔</span>
+      </MenuButton>
+      <Navbar isDarkMode={isDarkMode} isMenuOpen={isMenuOpen}>
         <Navlink
           to="/"
           isDarkMode={isDarkMode}

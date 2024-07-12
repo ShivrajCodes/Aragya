@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa'; // Import necessary icons from react-icons/fa
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 const Contact = () => {
   const styles = {
@@ -72,13 +72,13 @@ const Contact = () => {
 
   return (
     <div style={styles.contact}>
-      <h2 style={styles.h2}>TEAM AROGYA</h2>
+      <h2 style={styles.h2}>TEAM ARAGYA</h2>
       <p style={styles.p}>PRESENTING THE MEMBERS, WHOSE CONTRIBUTIONS HAVE MADE THE PROJECT A GRAND SUCCESS</p>
       <div style={styles.cardContainer}>
         {people.map((person, index) => (
           <div key={index} style={styles.card}>
             <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
-              <FaLinkedin style={styles.icon} /> {/* Use FaLinkedin from react-icons/fa */}
+              <FaLinkedin style={styles.icon} /> 
             </a>
             <img src={person.img} alt={person.name} style={styles.img} />
             <div style={styles.name}>{person.name}</div>
