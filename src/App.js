@@ -88,6 +88,13 @@ const MenuButton = styled.div`
   }
 `;
 
+const MenuIcon = styled.div`
+  width: 25px;
+  height: 3px;
+  background-color: ${props => (props.isDarkMode ? '#ffffff' : '#000000')};
+  margin: 4px 0;
+`;
+
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -117,7 +124,6 @@ const TextContainer = styled.div`
 const ImageContainer = styled.div`
   flex: 1;
   height: 400px;
-  background-color: ${props => (props.isDarkMode ? 'rgba(8, 10, 9, 0.8)' : 'rgba(255, 255, 255, 0.8)')};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,6 +131,12 @@ const ImageContainer = styled.div`
 
   @media (max-width: 1024px) {
     padding-top: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: transparent;
   }
 `;
 
@@ -137,6 +149,7 @@ const fadeIn = keyframes`
 const Title = styled.h1`
   font-size: 4em;
   margin: 0 0 20px 0;
+  color: #FF66CC;
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
   animation-delay: 0s;
@@ -149,6 +162,7 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   font-size: 3em;
   margin: 20px 0;
+  color: #CC33FF;
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
   animation-delay: 1s;
@@ -161,6 +175,7 @@ const Subtitle = styled.h2`
 const Description = styled.h3`
   font-size: 2em;
   margin: 20px 0;
+  color: #9933FF;
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
   animation-delay: 2s;
@@ -195,8 +210,8 @@ const Home = ({ isDarkMode }) => {
           Designed for effortless patient care, Quadra Care Vital Sync System is a portable ventilator merged with ECG, pulse rate monitoring, and saline level monitoring system together in a single setup. It provides accurate respiratory support and continuous cardiovascular monitoring. The ventilator uses advanced sensors and controls the algorithms, while on the other hand, the ECG attributes detection of real-life cardiac issues. The system is ideal for exigency as its compact design ensures easy transport and portability. Apart from that, an automated saline water monitoring system is also included to ensure the safe administration of saline monitoring solution to patients. Sensors are utilized in the system to measure the saline level in the bottle, which will timely alert whenever the bottle is going to be empty and need a replacement. Integrated data loggers and transmitters collect and send real-time data to monitoring stations or cloud-based platforms for analysis, allowing healthcare providers to make decisions. The system enhances patient care and safety in medical treatment by ensuring precise delivery and continuous monitoring.
         </DetailedDescription>
       </TextContainer>
-      <ImageContainer isDarkMode={isDarkMode}>
-        <img src="/images/QVCSS.png" alt="QVCSS" style={{ maxWidth: '100%', maxHeight: '100%', backgroundColor: 'transparent' }} />
+      <ImageContainer>
+        <img src="/images/QVCSS.png" alt="QVCSS" />
       </ImageContainer>
     </HomeContainer>
   );
@@ -242,54 +257,38 @@ const App = () => {
         />
       </ToggleButton>
       <MenuButton onClick={toggleMenu}>
-        <span role="img" aria-label="menu">🍔</span>
+        <MenuIcon isDarkMode={isDarkMode} />
+        <MenuIcon isDarkMode={isDarkMode} />
+        <MenuIcon isDarkMode={isDarkMode} />
       </MenuButton>
       <Navbar isDarkMode={isDarkMode} isMenuOpen={isMenuOpen}>
-        <Navlink
-          to="/"
-          isDarkMode={isDarkMode}
-          onClick={(e) => handleNavigation(e, '/')}
-        >
+        <Navlink to="/" isDarkMode={isDarkMode} onClick={(e) => handleNavigation(e, '/')}>
           Home
         </Navlink>
-        <Navlink
-          to="/about"
-          isDarkMode={isDarkMode}
-          onClick={(e) => handleNavigation(e, '/about')}
-        >
-          Instruction
+        <Navlink to="/about" isDarkMode={isDarkMode} onClick={(e) => handleNavigation(e, '/about')}>
+          About
         </Navlink>
-        <Navlink
-          to="/blog"
-          isDarkMode={isDarkMode}
-          onClick={(e) => handleNavigation(e, '/blog')}
-        >
-          Components
+        <Navlink to="/blog" isDarkMode={isDarkMode} onClick={(e) => handleNavigation(e, '/blog')}>
+          Blog
         </Navlink>
-        <Navlink
-          to="/contact"
-          isDarkMode={isDarkMode}
-          onClick={(e) => handleNavigation(e, '/contact')}
-        >
-          About Us
+        <Navlink to="/contact" isDarkMode={isDarkMode} onClick={(e) => handleNavigation(e, '/contact')}>
+          Contact
         </Navlink>
       </Navbar>
-      {!isTransitioning && (
-        <Routes>
-          <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
-          <Route path="/about" element={<PageContainer isDarkMode={isDarkMode}><About /></PageContainer>} />
-          <Route path="/blog" element={<PageContainer isDarkMode={isDarkMode}><Blog /></PageContainer>} />
-          <Route path="/contact" element={<PageContainer isDarkMode={isDarkMode}><Contact /></PageContainer>} />
-        </Routes>
-      )}
+      <Routes>
+        <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
+        <Route path="/about" element={<PageContainer isDarkMode={isDarkMode}><About /></PageContainer>} />
+        <Route path="/blog" element={<PageContainer isDarkMode={isDarkMode}><Blog /></PageContainer>} />
+        <Route path="/contact" element={<PageContainer isDarkMode={isDarkMode}><Contact /></PageContainer>} />
+      </Routes>
     </AppContainer>
   );
 };
 
-const AppWrapper = () => (
+const WrappedApp = () => (
   <Router>
     <App />
   </Router>
 );
 
-export default AppWrapper;
+export default WrappedApp;
