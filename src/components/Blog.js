@@ -4,6 +4,8 @@ const Blog = () => {
   const styles = {
     blog: {
       padding: '40px',
+      maxWidth: '1000px',
+      margin: 'auto',
     },
     h2: {
       fontSize: '2.5em',
@@ -13,20 +15,34 @@ const Blog = () => {
       display: 'flex',
       alignItems: 'center',
       marginBottom: '40px',
+      flexWrap: 'wrap',
     },
     textLeft: {
       flex: 1,
       paddingRight: '20px',
+      minWidth: '300px',
     },
     textRight: {
       flex: 1,
       paddingLeft: '20px',
+      minWidth: '300px',
     },
     image: {
       flex: 1,
-      width: '350px', 
-      height: '450px', 
+      maxWidth: '100%',
+      height: 'auto',
       objectFit: 'cover',
+    },
+    '@media (max-width: 768px)': {
+      h2: {
+        fontSize: '1.8em',
+      },
+      textLeft: {
+        paddingRight: '0',
+      },
+      textRight: {
+        paddingLeft: '0',
+      },
     },
   };
 

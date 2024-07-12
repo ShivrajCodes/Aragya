@@ -101,7 +101,7 @@ const HomeContainer = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   padding: 40px;
-  height: 100vh;
+  
   background-color: ${props => (props.isDarkMode ? 'rgba(8, 10, 9, 0.8)' : 'rgba(255, 255, 255, 0.8)')};
   color: ${props => (props.isDarkMode ? '#ffffff' : '#000000')};
   transition: all 0.3s;
@@ -220,7 +220,7 @@ const Home = ({ isDarkMode }) => {
 const PageContainer = styled.div`
   background-color: ${props => (props.isDarkMode ? 'rgba(8, 10, 9, 0.8)' : 'rgba(255, 255, 255, 0.8)')};
   color: ${props => (props.isDarkMode ? '#ffffff' : '#000000')};
-  min-height: 100vh;
+  
   transition: all 0.3s;
   animation: ${fadeInUp} 0.5s ease-in-out;
 `;

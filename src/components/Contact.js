@@ -1,11 +1,13 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   const styles = {
     contact: {
       padding: '40px',
       textAlign: 'center',
+      maxWidth: '1000px',
+      margin: 'auto',
     },
     h2: {
       fontSize: '2.5em',
@@ -13,6 +15,7 @@ const Contact = () => {
     },
     p: {
       fontSize: '1.2em',
+      marginBottom: '20px',
     },
     cardContainer: {
       display: 'flex',
@@ -28,6 +31,7 @@ const Contact = () => {
       borderRadius: '10px',
       textAlign: 'center',
       margin: '10px',
+      transition: 'transform 0.3s',
     },
     img: {
       width: '80%',
@@ -44,6 +48,22 @@ const Contact = () => {
       left: '10px',
       width: '20px',
       height: '20px',
+      color: '#0077b5',
+    },
+    '@media (max-width: 768px)': {
+      h2: {
+        fontSize: '1.8em',
+      },
+      p: {
+        fontSize: '1em',
+      },
+      card: {
+        width: '150px',
+        padding: '15px',
+      },
+      name: {
+        fontSize: '1em',
+      },
     },
   };
 
@@ -66,7 +86,7 @@ const Contact = () => {
     {
       name: 'Srijeeta Das',
       img: '/images/srijeeta.jpg',
-      linkedin: 'https://www.linkedin.com/in/srijeeta-das-0a6a33292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ',
+      linkedin: 'https://www.linkedin.com/in/srijeeta-das-0a6a33292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     },
   ];
 
@@ -78,7 +98,7 @@ const Contact = () => {
         {people.map((person, index) => (
           <div key={index} style={styles.card}>
             <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
-              <FaLinkedin style={styles.icon} /> 
+              <FaLinkedin style={styles.icon} />
             </a>
             <img src={person.img} alt={person.name} style={styles.img} />
             <div style={styles.name}>{person.name}</div>
