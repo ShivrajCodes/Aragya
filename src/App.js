@@ -266,13 +266,13 @@ const App = () => {
           Home
         </Navlink>
         <Navlink to="/about" isDarkMode={isDarkMode} onClick={(e) => handleNavigation(e, '/about')}>
-          About
+          Instructions
         </Navlink>
         <Navlink to="/blog" isDarkMode={isDarkMode} onClick={(e) => handleNavigation(e, '/blog')}>
-          Blog
+          Components Used
         </Navlink>
         <Navlink to="/contact" isDarkMode={isDarkMode} onClick={(e) => handleNavigation(e, '/contact')}>
-          Contact
+          About Us
         </Navlink>
       </Navbar>
       <Routes>
