@@ -320,7 +320,7 @@ const Home = ({ isDarkMode }) => {
       </ContentContainer>
 
       <WhyChooseSection>
-        <DoctorImage src="/images/doctor-placeholder.jpg" alt="Doctor" />
+        <DoctorImage src="/images/doctor.png" alt="Doctor" />
         <WhyChooseText>
           <WhyChooseTitle>Why Choose QCVSS</WhyChooseTitle>
           <WhyChooseDescription>
