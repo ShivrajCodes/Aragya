@@ -25,11 +25,9 @@ const HomeContainer = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   padding: 40px;
-
   background-color: ${props => (props.isDarkMode ? 'rgba(8, 10, 9, 0.8)' : 'rgba(255, 255, 255, 0)')};
   color: ${props => (props.isDarkMode ? '#ffffff' : '#000000')};
   transition: all 0.3s;
-
   @media (max-width: 1024px) {
     padding: 20px;
   }
@@ -41,7 +39,6 @@ const ContentContainer = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-
   @media (max-width: 1024px) {
     flex-direction: column;
   }
@@ -52,7 +49,6 @@ const TextContainer = styled.div`
   padding-right: 20px;
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
-
   @media (max-width: 1024px) {
     padding-right: 0;
   }
@@ -65,11 +61,9 @@ const ImageContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 140px;
-
   @media (max-width: 1024px) {
     padding-top: 20px;
   }
-
   img {
     max-width: 100%;
     max-height: 100%;
@@ -83,7 +77,6 @@ const Title = styled.h1`
   color: #FF66CC;
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
-
   @media (max-width: 768px) {
     font-size: 2.5em;
   }
@@ -98,7 +91,6 @@ const Subtitle = styled.h2`
   -webkit-text-fill-color: transparent;
   animation: ${fadeIn} 2s forwards, ${gradientAnimation} 8s ease infinite;
   animation-delay: 1s;
-
   @media (max-width: 768px) {
     font-size: 2em;
   }
@@ -111,7 +103,6 @@ const Description = styled.h3`
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
   animation-delay: 2s;
-
   @media (max-width: 768px) {
     font-size: 1.5em;
   }
@@ -123,7 +114,6 @@ const DetailedDescription = styled.p`
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
   animation-delay: 3s;
-
   @media (max-width: 768px) {
     font-size: 1em;
   }
@@ -151,7 +141,6 @@ const WhyChooseSection = styled.div`
   opacity: 0;
   animation: ${fadeIn} 2s forwards;
   animation-delay: 4s;
-
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -161,7 +150,6 @@ const DoctorImage = styled.img`
   flex: 1;
   max-width: 100%;
   height: auto;
-
   @media (max-width: 768px) {
     order: 2;
     margin-top: 20px;
@@ -171,7 +159,6 @@ const DoctorImage = styled.img`
 const WhyChooseText = styled.div`
   flex: 2;
   padding-left: 20px;
-
   @media (max-width: 768px) {
     padding-left: 0;
   }
@@ -193,7 +180,6 @@ const ReviewSection = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -206,7 +192,6 @@ const Card = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 0 10px;
-
   @media (max-width: 768px) {
     margin: 10px 0;
   }
@@ -269,11 +254,9 @@ const FreeTrialButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   position: relative;
-
   @media (max-width: 768px) {
     font-size: 1em;
   }
-
   &:hover .popup {
     display: block;
   }
@@ -311,72 +294,73 @@ const Home = ({ isDarkMode }) => {
           <DetailedDescription>
             About the QCVSS: QUADRA CARE VITAL SYNC SYSTEM
             <br /><br />
-            Designed for effortless patient care, Quadra Care Vital Sync System is a portable ventilator merged with ECG, pulse rate monitoring, and saline level monitoring system together in a single setup. It provides accurate respiratory support and continuous cardiovascular monitoring. The ventilator uses advanced sensors and controls the algorithms, while on the other hand, the ECG attributes detection of real-time cardiac issues, which is ideal for exigency as its compact design ensures easy transport and portability. The system includes an automated saline water monitoring system, utilizing sensors to measure the saline level in the bottle and alert when it needs replacement. Integrated data loggers and transmitters collect and send real-time data to monitoring stations or cloud-based platforms for analysis, allowing healthcare providers to make decisions. The system enhances patient care and safety by ensuring precise delivery and continuous monitoring.
+            Designed for effortless patient care, Quadra Care Vital Sync System is a portable ventilator merged with ECG, pulse rate monitoring, and saline level monitoring system together in a single setup. It provides accurate respiratory support and continuous cardiovascular monitoring. The ventilator uses advanced sensors and controls the algorithms, while on the other hand, the ECG attributes detection of real-time cardiac issues, which is ideal for exigency as its compact design ensures easy transport and portability. The system includes an automated saline water monitoring system for real-time monitoring and precise administration of saline levels.
           </DetailedDescription>
+          <Links>
+            <Link href="#about" isDarkMode={isDarkMode}>About</Link>
+            <Link href="#features" isDarkMode={isDarkMode}>Features</Link>
+            <Link href="#contact" isDarkMode={isDarkMode}>Contact</Link>
+          </Links>
         </TextContainer>
         <ImageContainer>
-          <img src="/images/QVCSS.png" alt="QVCSS" />
+          <img src="https://www.shutterstock.com/image-vector/smartphone-application-online-doctor-consultation-2165210368" alt="Home Image" />
         </ImageContainer>
       </ContentContainer>
-
       <WhyChooseSection>
-        <DoctorImage src="/images/doctor.png" alt="Doctor" />
+        <DoctorImage src="https://www.shutterstock.com/image-vector/mature-man-patient-clinician-looking-2097191994" alt="Doctor Image" />
         <WhyChooseText>
-          <WhyChooseTitle>Why Choose QCVSS</WhyChooseTitle>
+          <WhyChooseTitle>Why Choose QCVSS?</WhyChooseTitle>
           <WhyChooseDescription>
-            QCVSS integrates multiple vital monitoring systems into one portable device, making it a convenient and efficient choice for healthcare providers. The advanced technology and compact design ensure accurate and continuous monitoring, enhancing patient care and safety.
+            Quadra Care Vital Sync System combines life-saving respiratory support with continuous cardiac monitoring and precise saline level management. Our portable design ensures that patients receive comprehensive care in any setting.
           </WhyChooseDescription>
         </WhyChooseText>
       </WhyChooseSection>
-
-      <UserReviewHeader>WHAT OUR USERS HAVE TO SAY</UserReviewHeader>
-
       <ReviewSection>
         <Card>
+          <UserImage src="https://example.com/user1.jpg" alt="User 1" />
+          <UserName>User 1</UserName>
+          <ReviewText>Amazing device! It really helped me during a critical time.</ReviewText>
           <StarRating>
-            <UserImage src="/images/user-placeholder.jpg" alt="User" />
-            <UserName>John Doe</UserName>
-          </StarRating>
-          <ReviewText>QCVSS has transformed our patient care approach. The integrated monitoring system is a game-changer!</ReviewText>
-          <StarRating>
-            {[...Array(4)].map((star, index) => (
-              <Star key={index}>★</Star>
-            ))}
-          </StarRating>
-        </Card>
-        <Card>
-          <StarRating>
-            <UserImage src="/images/user-placeholder.jpg" alt="User" />
-            <UserName>Jane Smith</UserName>
-          </StarRating>
-          <ReviewText>The portability and accuracy of QCVSS have significantly improved our response time in emergencies.</ReviewText>
-          <StarRating>
-            {[...Array(4)].map((star, index) => (
-              <Star key={index}>★</Star>
-            ))}
+            <Star>★</Star>
+            <Star>★</Star>
+            <Star>★</Star>
+            <Star>★</Star>
+            <Star>★</Star>
           </StarRating>
         </Card>
         <Card>
+          <UserImage src="https://example.com/user2.jpg" alt="User 2" />
+          <UserName>User 2</UserName>
+          <ReviewText>Highly recommend this product for its accuracy and reliability.</ReviewText>
           <StarRating>
-            <UserImage src="/images/user-placeholder.jpg" alt="User" />
-            <UserName>Dr. Emily Clark</UserName>
+            <Star>★</Star>
+            <Star>★</Star>
+            <Star>★</Star>
+            <Star>★</Star>
+            <Star>★</Star>
           </StarRating>
-          <ReviewText>An essential tool for modern healthcare. QCVSS delivers reliable and comprehensive patient monitoring.</ReviewText>
+        </Card>
+        <Card>
+          <UserImage src="https://example.com/user3.jpg" alt="User 3" />
+          <UserName>User 3</UserName>
+          <ReviewText>The portable design makes it perfect for emergencies.</ReviewText>
           <StarRating>
-            {[...Array(4)].map((star, index) => (
-              <Star key={index}>★</Star>
-            ))}
+            <Star>★</Star>
+            <Star>★</Star>
+            <Star>★</Star>
+            <Star>★</Star>
+            <Star>★</Star>
           </StarRating>
         </Card>
       </ReviewSection>
-
       <FreeTrialContainer>
-        <FreeTrialText>What are you waiting for, get a free trial today!</FreeTrialText>
+        <FreeTrialText>Get your free trial today and experience the future of patient care!</FreeTrialText>
         <FreeTrialButton>
-          Get A Free Trial Today
-          <Popup className="popup">Coming soon</Popup>
+          Start Free Trial
+          <Popup className="popup">Sign up for a free trial now!</Popup>
         </FreeTrialButton>
       </FreeTrialContainer>
+      <UserReviewHeader>User Reviews</UserReviewHeader>
     </HomeContainer>
   );
 };
