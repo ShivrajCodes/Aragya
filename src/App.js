@@ -5,7 +5,7 @@ import './App.css';
 import About from './components/About';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
-import Home from './components/Home';  // Import Home component
+import Home from './components/Home';  
 
 const fadeInUp = keyframes`
   0% {
@@ -50,27 +50,60 @@ const ContentWrapper = styled.div`
 
 const Navbar = styled.nav`
   display: flex;
-  justify-content: center;
-  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #020024; /* Background color to match the provided design */
   border-bottom: 1px solid #eaeaea;
   animation: ${fadeInUp} 0.5s ease-in-out;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
-    display: ${props => (props.isMenuOpen ? 'flex' : 'none')};
   }
+`;
+
+const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Logo = styled.img`
+  height: 40px;
+  margin-right: 20px;
+`;
+
+const PlaceholderLogo = styled.div`
+  height: 40px;
+  width: 40px;
+  background-color: #ccc; /* Placeholder color */
+  border-radius: 50%;
+`;
+
+const BrandName = styled.span`
+  color: #b3b3b3; /* Color to match the provided design */
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 10px;
 `;
 
 const Navlink = styled(NavLink)`
   margin: 0 20px;
   text-decoration: none;
-  color: black;
+  color: #b3b3b3; /* Color to match the provided design */
   font-size: 18px;
   font-weight: 500;
   position: relative;
+
   &.active {
-    color: red;
+    color: red; /* Active color to match the provided design */
+  }
+
+  &:hover {
+    color: #ffffff;
   }
 
   @media (max-width: 768px) {
@@ -128,18 +161,25 @@ const App = () => {
           <MenuIcon />
         </MenuButton>
         <Navbar isMenuOpen={isMenuOpen}>
-          <Navlink to="/" onClick={(e) => handleNavigation(e, '/')}>
-            Home
-          </Navlink>
-          <Navlink to="/about" onClick={(e) => handleNavigation(e, '/about')}>
-            Instructions
-          </Navlink>
-          <Navlink to="/blog" onClick={(e) => handleNavigation(e, '/blog')}>
-            Components Used
-          </Navlink>
-          <Navlink to="/contact" onClick={(e) => handleNavigation(e, '/contact')}>
-            About Us
-          </Navlink>
+          <LogoWrapper>
+            <Logo src="/images/uem3.png" alt="UEM Logo" />
+            <PlaceholderLogo />
+            <BrandName>ARAGYA</BrandName>
+          </LogoWrapper>
+          <div>
+            <Navlink to="/" onClick={(e) => handleNavigation(e, '/')}>
+              Home
+            </Navlink>
+            <Navlink to="/about" onClick={(e) => handleNavigation(e, '/about')}>
+              Instructions
+            </Navlink>
+            <Navlink to="/blog" onClick={(e) => handleNavigation(e, '/blog')}>
+              Components Used
+            </Navlink>
+            <Navlink to="/contact" onClick={(e) => handleNavigation(e, '/contact')}>
+              About Us
+            </Navlink>
+          </div>
         </Navbar>
         <Routes>
           <Route path="/" element={<Home />} />

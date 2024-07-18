@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Contact = () => {
   const styles = {
@@ -27,11 +27,14 @@ const Contact = () => {
       position: 'relative',
       width: '200px',
       padding: '20px',
+      backgroundColor: 'blue',
       boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
       borderRadius: '10px',
       textAlign: 'center',
       margin: '10px',
       transition: 'transform 0.3s',
+      color: 'white',
+      overflow: 'hidden',
     },
     img: {
       width: '80%',
@@ -42,13 +45,34 @@ const Contact = () => {
       fontSize: '1.2em',
       fontWeight: 'bold',
     },
+    role: {
+      fontSize: '1em',
+      fontStyle: 'italic',
+    },
+    handle: {
+      fontSize: '0.8em',
+      color: 'lightgray',
+    },
+    iconBox: {
+      position: 'absolute',
+      top: '10px',
+      right: '10px',
+      display: 'flex',
+      gap: '5px',
+    },
     icon: {
+      width: '20px',
+      height: '20px',
+      color: 'white',
+    },
+    badge: {
       position: 'absolute',
       top: '10px',
       left: '10px',
-      width: '20px',
-      height: '20px',
-      color: '#0077b5',
+      backgroundColor: 'orange',
+      padding: '5px 10px',
+      borderRadius: '5px',
+      fontSize: '0.8em',
     },
     '@media (max-width: 768px)': {
       h2: {
@@ -69,24 +93,40 @@ const Contact = () => {
 
   const people = [
     {
-      name: 'Sandipan Dubey (Leader)',
+      name: 'Sandipan Dubey',
+      role: 'Leader',
+      handle: '@BinaryLearn',
       img: '/images/sandipan.jpg',
       linkedin: 'https://www.linkedin.com/in/sandipan-dubey-2314442ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      twitter: 'https://twitter.com/sandipan',
+      instagram: 'https://instagram.com/sandipan',
     },
     {
       name: 'Soham Aich',
+      role: 'Co-Leader',
+      handle: '@Aragya',
       img: '/images/soham.jpg',
       linkedin: 'https://www.linkedin.com/in/soham-aich-36a712292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      twitter: 'https://twitter.com/soham',
+      instagram: 'https://instagram.com/soham',
     },
     {
       name: 'Ritam Das',
+      role: 'Developer',
+      handle: '@Aragya',
       img: '/images/ritam.jpg',
       linkedin: 'https://www.linkedin.com/in/ritam-das-30874628a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      twitter: 'https://twitter.com/ritam',
+      instagram: 'https://instagram.com/ritam',
     },
     {
       name: 'Srijeeta Das',
+      role: 'Designer',
+      handle: '@Aragya',
       img: '/images/srijeeta.jpg',
       linkedin: 'https://www.linkedin.com/in/srijeeta-das-0a6a33292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      twitter: 'https://twitter.com/srijeeta',
+      instagram: 'https://instagram.com/srijeeta',
     },
   ];
 
@@ -97,11 +137,22 @@ const Contact = () => {
       <div style={styles.cardContainer}>
         {people.map((person, index) => (
           <div key={index} style={styles.card}>
-            <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
-              <FaLinkedin style={styles.icon} />
-            </a>
+            <div style={styles.badge}>{person.role}</div>
+            <div style={styles.iconBox}>
+              <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
+                <FaLinkedin style={styles.icon} />
+              </a>
+              <a href={person.twitter} target="_blank" rel="noopener noreferrer">
+                <FaTwitter style={styles.icon} />
+              </a>
+              <a href={person.instagram} target="_blank" rel="noopener noreferrer">
+                <FaInstagram style={styles.icon} />
+              </a>
+            </div>
             <img src={person.img} alt={person.name} style={styles.img} />
             <div style={styles.name}>{person.name}</div>
+            <div style={styles.role}>{person.role}</div>
+            <div style={styles.handle}>{person.handle}</div>
           </div>
         ))}
       </div>
