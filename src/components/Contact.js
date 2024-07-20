@@ -95,7 +95,7 @@ const Contact = () => {
     {
       name: 'Sandipan Dubey',
       role: 'Leader',
-      handle: '@BinaryLearn',
+      handle: '@Aragya',
       img: '/images/sandipan.jpg',
       linkedin: 'https://www.linkedin.com/in/sandipan-dubey-2314442ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       twitter: 'https://twitter.com/sandipan',

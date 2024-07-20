@@ -1,22 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, NavLink, Routes, Route, useNavigate } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import './App.css';
 import About from './components/About';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
-import Home from './components/Home';  
-
-const fadeInUp = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
+import Home from './components/Home';
 
 const AppContainer = styled.div`
   background-image: url('/images/images.png');
@@ -26,7 +15,6 @@ const AppContainer = styled.div`
   min-height: 100vh;
   transition: all 0.3s;
   position: relative;
-  animation: ${fadeInUp} 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -55,7 +43,6 @@ const Navbar = styled.nav`
   padding: 20px 40px;
   background-color: #020024; /* Background color to match the provided design */
   border-bottom: 1px solid #eaeaea;
-  animation: ${fadeInUp} 0.5s ease-in-out;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -115,24 +102,39 @@ const MenuButton = styled.div`
   position: absolute;
   top: 10px;
   left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  display: none;
+  z-index: 1001;
 
-  @media (max-width: 768px) {
-    display: block;
+  @media (min-width: 769px) {
+    display: none;
   }
 `;
 
 const MenuIcon = styled.div`
   width: 25px;
   height: 3px;
-  background-color: #000000;
+  background-color: #ffffff; /* White color for the menu icon */
   margin: 4px 0;
+`;
+
+const MenuItems = styled.div`
+  display: ${({ isMenuOpen }) => (isMenuOpen ? 'block' : 'none')};
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: left;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const PageContainer = styled.div`
   transition: all 0.3s;
-  animation: ${fadeInUp} 0.5s ease-in-out;
 `;
 
 const App = () => {
@@ -147,7 +149,7 @@ const App = () => {
   const handleNavigation = async (e, path) => {
     e.preventDefault();
     setIsTransitioning(true);
-    await new Promise(r => setTimeout(r, 200));
+    await new Promise((r) => setTimeout(r, 200));
     setIsTransitioning(false);
     navigate(path);
   };
@@ -160,13 +162,13 @@ const App = () => {
           <MenuIcon />
           <MenuIcon />
         </MenuButton>
-        <Navbar isMenuOpen={isMenuOpen}>
+        <Navbar>
           <LogoWrapper>
             <Logo src="/images/uem3.png" alt="UEM Logo" />
             <PlaceholderLogo />
             <BrandName>ARAGYA</BrandName>
           </LogoWrapper>
-          <div>
+          <MenuItems isMenuOpen={isMenuOpen || window.innerWidth > 768}>
             <Navlink to="/" onClick={(e) => handleNavigation(e, '/')}>
               Home
             </Navlink>
@@ -179,7 +181,7 @@ const App = () => {
             <Navlink to="/contact" onClick={(e) => handleNavigation(e, '/contact')}>
               About Us
             </Navlink>
-          </div>
+          </MenuItems>
         </Navbar>
         <Routes>
           <Route path="/" element={<Home />} />
