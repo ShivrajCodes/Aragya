@@ -1,307 +1,279 @@
-
-
 import React from 'react';
+import styled from 'styled-components';
 
-const About = () => {
-  const containerStyle = {
-    padding: '20px',
-    backgroundColor: '#f9f9f9',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  };
+const CardContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+`;
 
-  const headingStyle = {
-    color: '#333',
-    textAlign: 'center',
-    marginBottom: '20px',
-  };
+const Card = styled.div`
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+`;
 
-  const cardContainerStyle = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '20px',
-    justifyContent: 'center',
-  };
+const CardHeader = styled.div`
+  background-color: #0070f3;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+`;
 
-  const cardStyle = {
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    maxWidth: '300px',
-    padding: '20px',
-    textAlign: 'left',
-    flex: '1 1 calc(33.333% - 40px)',
-    marginBottom: '20px',
-  };
+const CardContent = styled.div`
+  padding: 15px;
+  font-size: 16px;
+`;
 
-  const imageStyle = {
-    width: '100%',
-    borderRadius: '8px',
-    marginBottom: '15px',
-  };
-
-  const contentStyle = {
-    fontSize: '16px',
-    lineHeight: '1.6',
-    color: '#555',
-  };
-
+const General = () => {
   return (
-    <div style={containerStyle}>
-      <h1 style={headingStyle}>SOME COMMON HEALTH MEASURES AND INSTRUCTIONS</h1>
-      <div style={cardContainerStyle}>
-        {/* Card 1: Digital Blood Pressure Machine */}
-        <div style={cardStyle}>
-          <img src="digital-blood-pressure-machine.jpg" alt="Digital Blood Pressure Machine" style={imageStyle} />
-          <div style={contentStyle}>
-            <h3>Digital Blood Pressure Machine</h3>
-            <p>Steps to Use an Automatic Digital Blood Pressure Monitor:</p>
-            <ol>
-              <li>
-                <strong>Prepare Yourself:</strong>
-                <ul>
-                  <li>Rest quietly for 5-10 minutes before measuring your blood pressure.</li>
-                  <li>Avoid caffeine, exercise, and smoking for at least 30 minutes prior.</li>
-                  <li>Ensure you have an empty bladder.</li>
-                  <li>Sit comfortably with your back supported and feet flat on the floor. Do not cross your legs.</li>
-                  <li>Rest your arm on a table at heart level.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Prepare the Machine:</strong>
-                <ul>
-                  <li>Ensure the monitor is properly charged or has fresh batteries.</li>
-                  <li>Attach the cuff to the machine if it's not already connected.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Position the Cuff:</strong>
-                <ul>
-                  <li>Remove any tight clothing or thick fabric from your upper arm.</li>
-                  <li>Wrap the cuff snugly around your upper arm, about 1 inch (2.5 cm) above the bend of your elbow. The cuff should be at heart level.</li>
-                  <li>Ensure the cuff's tube is aligned with the center of your arm (usually in line with your middle finger).</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Take the Measurement:</strong>
-                <ul>
-                  <li>Turn on the blood pressure monitor by pressing the power/start button.</li>
-                  <li>Stay still and quiet as the cuff inflates and then gradually deflates. Avoid talking or moving during the measurement.</li>
-                  <li>The machine will display your systolic and diastolic blood pressure readings, along with your pulse rate, once the measurement is complete.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Read the Results:</strong>
-                <ul>
-                  <li>Note the systolic pressure (the higher number), diastolic pressure (the lower number), and pulse rate displayed on the screen.</li>
-                </ul>
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        {/* Card 2: Oximeter */}
-        <div style={cardStyle}>
-          <img src="oximeter.jpg" alt="Oximeter" style={imageStyle} />
-          <div style={contentStyle}>
-            <h3>Oximeter</h3>
-            <p>Steps to Use a Pulse Oximeter:</p>
-            <ol>
-              <li>
-                <strong>Prepare Yourself:</strong>
-                <ul>
-                  <li>Sit down and relax for a few minutes before taking a measurement.</li>
-                  <li>Ensure your hands are warm, relaxed, and clean. Cold or dirty hands can affect the accuracy.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Prepare the Device:</strong>
-                <ul>
-                  <li>Turn on the pulse oximeter by pressing the power button.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Position the Device:</strong>
-                <ul>
-                  <li>Open the clamp of the pulse oximeter.</li>
-                  <li>Insert your index finger (you can also use your middle or ring finger) into the device, ensuring that your fingertip is positioned correctly on the sensor.</li>
-                  <li>The display screen should be facing you so you can read it easily.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Take the Measurement:</strong>
-                <ul>
-                  <li>Keep your hand steady and the pulse oximeter in place while it takes the measurement.</li>
-                  <li>Remain still and avoid moving or talking during the measurement to ensure accuracy.</li>
-                  <li>Wait for the oximeter to display your reading. This typically takes a few seconds.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Read the Results:</strong>
-                <ul>
-                  <li>The pulse oximeter will display two important numbers:</li>
-                  <li>SpO2: The oxygen saturation level in your blood, usually represented as a percentage.</li>
-                  <li>Pulse Rate: Your heart rate, usually represented in beats per minute (BPM).</li>
-                </ul>
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        {/* Card 3: Thermometer (Digital) */}
-        <div style={cardStyle}>
-          <img src="digital-thermometer.jpg" alt="Digital Thermometer" style={imageStyle} />
-          <div style={contentStyle}>
-            <h3>Thermometer (Digital)</h3>
-            <p>Steps to Use a Digital Thermometer:</p>
-            <ol>
-              <li>
-                <strong>Prepare the Thermometer:</strong>
-                <ul>
-                  <li>Ensure the thermometer is clean and disinfected. You can use an alcohol wipe to clean the probe before use.</li>
-                  <li>Turn on the thermometer by pressing the power button. Wait for the thermometer to indicate it is ready for use (usually a beep or a display change).</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Position the Thermometer:</strong>
-                <ul>
-                  <li>
-                    <strong>Oral Use:</strong>
-                    <ul>
-                      <li>Place the tip of the thermometer under your tongue.</li>
-                      <li>Close your lips around the thermometer to hold it in place.</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Axillary (Underarm) Use:</strong>
-                    <ul>
-                      <li>Place the tip of the thermometer in the center of your armpit.</li>
-                      <li>Lower your arm and hold it close to your body to ensure the thermometer stays in place.</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Rectal Use:</strong>
-                    <ul>
-                      <li>Apply a small amount of lubricant (like petroleum jelly) to the tip of the thermometer.</li>
-                      <li>Gently insert the tip of the thermometer into the rectum (about 1/2 to 1 inch for infants, up to 1 inch for adults). This method is often used for infants or very young children.</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Tympanic (Ear) Use:</strong>
-                    <ul>
-                      <li>Attach the protective cover (if applicable).</li>
-                      <li>Gently pull the ear back to straighten the ear canal and insert the thermometer tip into the ear canal.</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Temporal (Forehead) Use:</strong>
-                    <ul>
-                      <li>Place the thermometer's probe flat on the center of the forehead, press and hold the scan button, and then move the thermometer across the forehead to the hairline.</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>Take the Measurement:</strong>
-                <ul>
-                  <li>Follow the thermometer’s instructions for the specific type of measurement.</li>
-                  <li>Stay still and avoid moving the thermometer while it takes the reading. This usually takes a few seconds to a minute, depending on the type and model of the thermometer.</li>
-                  <li>Wait for the beep or signal indicating that the measurement is complete.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Read the Results:</strong>
-                <ul>
-                  <li>The temperature reading will be displayed on the screen.</li>
-                  <li>Note the temperature and any other indicators shown on the display (such as a fever alert).</li>
-                </ul>
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        {/* Card 4: Inhaler */}
-        <div style={cardStyle}>
-          <img src="inhaler.jpg" alt="Inhaler" style={imageStyle} />
-          <div style={contentStyle}>
-            <h3>Inhaler</h3>
-            <p>Steps to Use a Metered-Dose Inhaler (MDI):</p>
-            <ol>
-              <li>
-                <strong>Prepare the Inhaler:</strong>
-                <ul>
-                  <li>Remove the cap from the mouthpiece and check for any debris or foreign objects.</li>
-                  <li>Shake the inhaler well (usually for about 5-10 seconds) to mix the medication properly.</li>
-                  <li>If it’s a new inhaler or hasn’t been used in a while, you might need to prime it by spraying a few puffs into the air.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Position Yourself:</strong>
-                <ul>
-                  <li>Sit up or stand up straight to ensure your lungs can fully expand.</li>
-                  <li>Breathe out fully to empty your lungs.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Position the Inhaler:</strong>
-                <ul>
-                  <li>
-                    <strong>Without a Spacer:</strong>
-                    <ul>
-                      <li>Place the mouthpiece of the inhaler into your mouth, sealing your lips around it.</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>With a Spacer:</strong>
-                    <ul>
-                      <li>Attach the spacer to the inhaler and place the mouthpiece of the spacer into your mouth, sealing your lips around it.</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>Inhale the Medication:</strong>
-                <ul>
-                  <li>Press down on the inhaler to release a dose of medication while simultaneously taking a slow, deep breath in.</li>
-                  <li>If using a spacer, press down on the inhaler and then take a slow, deep breath in through the spacer.</li>
-                  <li>Continue to inhale slowly and deeply to ensure the medication reaches your lungs.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Hold Your Breath:</strong>
-                <ul>
-                  <li>Hold your breath for about 10 seconds to allow the medication to settle in your lungs.</li>
-                  <li>Exhale slowly through your mouth or nose.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Repeat if Necessary:</strong>
-                <ul>
-                  <li>If you need a second dose, wait about 30 seconds to 1 minute between puffs.</li>
-                  <li>Shake the inhaler again and repeat the steps.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>After Using the Inhaler:</strong>
-                <ul>
-                  <li>Replace the cap on the inhaler.</li>
-                  <li>If the inhaler contains a steroid medication, rinse your mouth with water and spit it out to prevent oral thrush (a fungal infection).</li>
-                </ul>
-              </li>
-            </ol>
-            <h4>Tips for Using an Inhaler:</h4>
-            <ul>
-              <li><strong>Use a Spacer:</strong> If you have difficulty coordinating the inhaler puff and your breath, use a spacer. It helps ensure more medication reaches your lungs.</li>
-              <li><strong>Check Dosage Counter:</strong> Some inhalers have a dosage counter. Keep track of the doses left to know when to get a refill.</li>
-              <li><strong>Clean the Inhaler:</strong> Regularly clean the mouthpiece and spacer to prevent medication buildup and ensure proper functioning.</li>
-              <li><strong>Practice Proper Technique:</strong> Make sure you are using the correct technique. Ask your healthcare provider to watch and guide you if needed.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
+    <CardContainer>
+      <Card>
+        <CardHeader>Blood Glucose Meter</CardHeader>
+        <CardContent>
+          <ol>
+            <li>Wash hands and prepare the device.</li>
+            <li>Insert test strip and use the lancing device to draw blood.</li>
+            <li>Apply blood to the test strip and read the results.</li>
+          </ol>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardHeader>Nebulizer</CardHeader>
+        <CardContent>
+          <ol>
+            <li>
+              <strong>Prepare the Equipment:</strong>
+              <ul>
+                <li>Wash your hands with soap and water to prevent contamination.</li>
+                <li>Ensure all parts of the nebulizer are clean and dry before assembly.</li>
+                <li>Plug in the nebulizer compressor or ensure it has sufficient battery charge if it's a portable model.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Assemble the Nebulizer:</strong>
+              <ul>
+                <li>Attach the air tubing to the air outlet on the compressor.</li>
+                <li>Connect the other end of the tubing to the base of the nebulizer cup.</li>
+                <li>Open the nebulizer cup and place the prescribed medication inside. Make sure you use the exact amount prescribed by your doctor.</li>
+                <li>Reassemble the nebulizer cup securely.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Attach the Mouthpiece or Mask:</strong>
+              <ul>
+                <li>Attach the mouthpiece or mask to the top of the nebulizer cup. Use a mouthpiece if possible, as it delivers more medication to the lungs. Use a mask if the mouthpiece is not suitable, especially for young children or those who cannot hold the mouthpiece.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Position Yourself:</strong>
+              <ul>
+                <li>Sit in a comfortable, upright position to allow your lungs to fully expand.</li>
+                <li>Place the mouthpiece in your mouth and close your lips around it. If using a mask, place it over your nose and mouth, securing it with the elastic band.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Turn on the Nebulizer:</strong>
+              <ul>
+                <li>Turn on the compressor by pressing the power button.</li>
+                <li>You should see a fine mist coming from the mouthpiece or mask.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Inhale the Medication:</strong>
+              <ul>
+                <li>Breathe in slowly and deeply through your mouth if using a mouthpiece, or through your nose and mouth if using a mask.</li>
+                <li>Hold each breath for 2-3 seconds before exhaling to allow the medication to settle in your lungs.</li>
+                <li>Continue breathing slowly and deeply until all the medication in the nebulizer cup is used up. This usually takes about 10-15 minutes.</li>
+              </ul>
+            </li>
+          </ol>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardHeader>CPR</CardHeader>
+        <CardContent>
+          <ol>
+            <li>
+              <strong>Assess the Scene:</strong>
+              <ul>
+                <li>Ensure the area is safe for both you and the person needing CPR.</li>
+                <li>Check for any hazards or dangers that could harm you or the person.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Check Responsiveness:</strong>
+              <ul>
+                <li>Tap the person on the shoulder and shout loudly, "Are you okay?" Check for any response, such as movement or sound.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Call for Help:</strong>
+              <ul>
+                <li>If there is no response, or if the person is not breathing normally (gasping or not breathing at all), immediately call emergency services (911 or local emergency number) for help.</li>
+                <li>If there is someone nearby, ask them to call for help and bring an AED (Automated External Defibrillator), if available.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Open the Airway:</strong>
+              <ul>
+                <li>Gently tilt the person's head back and lift the chin to open the airway. This helps ensure clear passage for air to enter and exit the lungs.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Check for Breathing:</strong>
+              <ul>
+                <li>Look, listen, and feel for signs of normal breathing. Watch for chest rise, listen for breathing sounds, and feel for breath on your cheek.</li>
+                <li>If the person is not breathing normally, proceed to CPR.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Begin Chest Compressions:</strong>
+              <ul>
+                <li>Place the heel of one hand on the center of the person's chest, between the nipples.</li>
+                <li>Place your other hand on top of the first hand, interlocking your fingers.</li>
+                <li>Position your shoulders directly above your hands, with elbows locked.</li>
+                <li>Push down hard and fast, compressing the chest at least 2 inches (5 centimeters) deep for adult and adolescent victims. Allow the chest to recoil completely between compressions.</li>
+                <li>Perform chest compressions at a rate of 100-120 compressions per minute, to the beat of the song "Stayin' Alive" by the Bee Gees or using a metronome for guidance.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Give Rescue Breaths (if trained and willing):</strong>
+              <ul>
+                <li>Tilt the person's head back and lift the chin again to open the airway.</li>
+                <li>Pinch the person's nose shut.</li>
+                <li>Give two rescue breaths, each lasting about 1 second and making sure the chest rises with each breath.</li>
+                <li>If rescue breaths do not go in, reposition the head and try again.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Continue CPR:</strong>
+              <ul>
+                <li>Perform cycles of 30 chest compressions followed by 2 rescue breaths (if giving breaths).</li>
+                <li>Continue CPR until:
+                  <ul>
+                    <li>Help arrives and takes over.</li>
+                    <li>An AED becomes available and is ready to use.</li>
+                    <li>You are too exhausted to continue.</li>
+                    <li>The person starts breathing normally.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Use an AED (if available):</strong>
+              <ul>
+                <li>Follow the prompts and instructions provided by the AED.</li>
+                <li>Apply the pads to the person's bare chest as shown in the diagrams on the pads.</li>
+                <li>Allow the AED to analyze the heart rhythm. If a shock is advised, make sure no one is touching the person and press the shock button as directed.</li>
+                <li>Resume CPR immediately after delivering the shock, following the AED prompts.</li>
+              </ul>
+            </li>
+          </ol>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardHeader>First Aid</CardHeader>
+        <CardContent>
+          <ol>
+            <li>
+              <strong>Assess the Scene:</strong>
+              <ul>
+                <li>Ensure the area is safe for both you and the injured person. Check for any hazards or dangers.</li>
+                <li>Put on gloves if available to protect yourself from bodily fluids and potential infections.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Check the Person:</strong>
+              <ul>
+                <li>Assess the person’s level of consciousness. Tap their shoulders and ask loudly, "Are you okay?"</li>
+                <li>If there is no response, shout for help and call emergency services (911 or local emergency number).</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Provide Comfort:</strong>
+              <ul>
+                <li>Reassure the person and keep them calm. Let them know help is on the way.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Perform Initial Assessment (ABCs):</strong>
+              <ul>
+                <li><strong>Airway:</strong> Ensure the person's airway is open and clear. If not, tilt their head back and lift the chin to open the airway.</li>
+                <li><strong>Breathing:</strong> Check for breathing. Look, listen, and feel for chest rise and breaths for up to 10 seconds.</li>
+                <li><strong>Circulation:</strong> Check for signs of circulation (pulse or movement) and severe bleeding.</li>
+              </ul>
+            </li>
+          </ol>
+          <ul>
+            <li><strong>CPR (Cardiopulmonary Resuscitation):</strong>
+              <ul>
+                <li>If the person is unconscious and not breathing normally, begin CPR immediately. Perform chest compressions and rescue breaths (if trained) until help arrives.</li>
+                <li>Follow the steps outlined earlier for CPR.</li>
+              </ul>
+            </li>
+            <li><strong>Choking:</strong>
+              <ul>
+                <li>If the person is conscious but choking and unable to speak or breathe, perform abdominal thrusts (Heimlich maneuver).</li>
+                <li>Stand behind the person, wrap your arms around their waist, and make a fist with one hand.</li>
+                <li>Place the thumb side of your fist against the person's abdomen, slightly above the navel and below the rib cage.</li>
+                <li>Grasp your fist with your other hand and quickly pull inward and upward in a series of thrusts until the object is expelled or the person can breathe.</li>
+              </ul>
+            </li>
+            <li><strong>Severe Bleeding:</strong>
+              <ul>
+                <li>Apply direct pressure to the wound using a clean cloth or bandage.</li>
+                <li>Elevate the injured limb above the level of the heart if possible.</li>
+                <li>Maintain pressure until bleeding stops or help arrives.</li>
+                <li>If bleeding cannot be controlled, apply a tourniquet (if trained) several inches above the wound, but do this only as a last resort.</li>
+              </ul>
+            </li>
+            <li><strong>Burns:</strong>
+              <ul>
+                <li>Remove the person from the source of heat or chemical causing the burn.</li>
+                <li>Cool the burn with cool running water for at least 10 minutes, or until the pain subsides.</li>
+                <li>Cover the burn loosely with a sterile, nonstick bandage or clean cloth.</li>
+              </ul>
+            </li>
+            <li><strong>Fractures and Sprains:</strong>
+              <ul>
+                <li>Immobilize the injured area with a splint or sling to prevent further injury.</li>
+                <li>Apply ice wrapped in a cloth to reduce swelling and pain.</li>
+              </ul>
+            </li>
+            <li><strong>Seizures:</strong>
+              <ul>
+                <li>Keep the person safe from injury by clearing away objects that could cause harm.</li>
+                <li>Do not restrain the person; instead, protect their head and move objects away from them.</li>
+                <li>After the seizure ends, turn the person onto their side to help keep their airway clear.</li>
+              </ul>
+            </li>
+            <li><strong>Poisoning:</strong>
+              <ul>
+                <li>Call Poison Control (1-800-222-1222) immediately for guidance.</li>
+                <li>If the person is conscious, try to identify the substance ingested and provide this information to medical professionals.</li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li><strong>Additional Tips:</strong>
+              <ul>
+                <li><strong>Stay Calm:</strong> Your demeanor can help reassure the injured person and keep the situation under control.</li>
+                <li><strong>Do No Harm:</strong> Only perform first aid techniques you are trained to do to avoid causing further harm.</li>
+                <li><strong>Monitor:</strong> Continuously monitor the person’s condition until professional help arrives.</li>
+              </ul>
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+    </CardContainer>
   );
-}
+};
 
-export default About;
+export default General;

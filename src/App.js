@@ -6,6 +6,7 @@ import About from './components/About';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Home from './components/Home';
+import General from './components/General';
 
 const AppContainer = styled.div`
   background-image: url('/images/images.png');
@@ -178,9 +179,13 @@ const App = () => {
             <Navlink to="/blog" onClick={(e) => handleNavigation(e, '/blog')}>
               Components Used
             </Navlink>
+            <Navlink to="/general" onClick={(e) => handleNavigation(e, '/general')}>
+              General Information
+            </Navlink>
             <Navlink to="/contact" onClick={(e) => handleNavigation(e, '/contact')}>
               About Us
             </Navlink>
+            
           </MenuItems>
         </Navbar>
         <Routes>
@@ -188,6 +193,7 @@ const App = () => {
           <Route path="/about" element={<PageContainer><About /></PageContainer>} />
           <Route path="/blog" element={<PageContainer><Blog /></PageContainer>} />
           <Route path="/contact" element={<PageContainer><Contact /></PageContainer>} />
+          <Route path="/general" element={<PageContainer><General /></PageContainer>} />
         </Routes>
       </ContentWrapper>
     </AppContainer>
