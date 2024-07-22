@@ -311,11 +311,11 @@ const Home = ({ isDarkMode }) => {
           </Links>
         </TextContainer>
         <ImageContainer>
-          <img src="https://via.placeholder.com/400" alt="Medical Illustration" />
+          <img src="/images/QVCSS.png" alt="Medical Illustration" />
         </ImageContainer>
       </ContentContainer>
       <WhyChooseSection>
-        <DoctorImage src="https://via.placeholder.com/200" alt="Doctor" />
+        <DoctorImage src="/images/doctor.png" alt="Doctor" />
         <WhyChooseText>
           <WhyChooseTitle>WHY CHOOSE QVCSS</WhyChooseTitle>
           <WhyChooseDescription>
@@ -326,16 +326,16 @@ const Home = ({ isDarkMode }) => {
       <UserReviewHeader>USER REVIEWS</UserReviewHeader>
       <ReviewSection>
         <Card>
-          <UserImage src="https://via.placeholder.com/50" alt="User" />
-          <UserName>John Doe</UserName>
+          <UserImage src="/images/aratrika.png" alt="User" />
+          <UserName>Aratrika Shome</UserName>
           <ReviewText>QCVSS has revolutionized our patient care approach. The continuous monitoring and data logging capabilities are top-notch.</ReviewText>
           <StarRating>
             <Star>★</Star><Star>★</Star><Star>★</Star><Star>★</Star><Star>☆</Star>
           </StarRating>
         </Card>
         <Card>
-          <UserImage src="https://via.placeholder.com/50" alt="User" />
-          <UserName>Jane Smith</UserName>
+          <UserImage src="/images/riddhiraj.jpeg" alt="User" />
+          <UserName>Riddhiraj Chanda</UserName>
           <ReviewText>The portability and accuracy of QCVSS are unmatched. It's an indispensable tool in our healthcare facility.</ReviewText>
           <StarRating>
             <Star>★</Star><Star>★</Star><Star>★</Star><Star>★</Star><Star>★</Star>

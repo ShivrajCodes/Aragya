@@ -166,7 +166,8 @@ const App = () => {
         <Navbar>
           <LogoWrapper>
             <Logo src="/images/uem3.png" alt="UEM Logo" />
-            <PlaceholderLogo />
+           
+            <Logo src="/images/logo2.png" alt="ARAGYA Logo" />
             <BrandName>ARAGYA</BrandName>
           </LogoWrapper>
           <MenuItems isMenuOpen={isMenuOpen || window.innerWidth > 768}>
