@@ -43,37 +43,247 @@ const General = () => {
     <CardContainer>
       {/* Existing 4 cards */}
       <Card>
-        <CardImage src="path/to/existing-device1-image.jpg" alt="Existing Device 1" />
-        <CardHeader>Existing Device 1</CardHeader>
-        <CardContent>
-          {/* Content for existing device 1 */}
-        </CardContent>
-      </Card>
-      <Card>
-        <CardImage src="path/to/existing-device2-image.jpg" alt="Existing Device 2" />
-        <CardHeader>Existing Device 2</CardHeader>
-        <CardContent>
-          {/* Content for existing device 2 */}
-        </CardContent>
-      </Card>
-      <Card>
-        <CardImage src="path/to/existing-device3-image.jpg" alt="Existing Device 3" />
-        <CardHeader>Existing Device 3</CardHeader>
-        <CardContent>
-          {/* Content for existing device 3 */}
-        </CardContent>
-      </Card>
-      <Card>
-        <CardImage src="path/to/existing-device4-image.jpg" alt="Existing Device 4" />
-        <CardHeader>Existing Device 4</CardHeader>
-        <CardContent>
-          {/* Content for existing device 4 */}
-        </CardContent>
-      </Card>
+      <CardImage src="/images/inhaler.jpeg" alt="Blood Pressure Machine" />
+  <CardHeader>Inhaler</CardHeader>
+  <CardContent>
+    <ol>
+      <li>Prepare the Inhaler:
+        <ul>
+          <li>Remove the cap from the mouthpiece and check for any debris or foreign objects.</li>
+          <li>Shake the inhaler well (usually for about 5-10 seconds) to mix the medication properly.</li>
+          <li>If it’s a new inhaler or hasn’t been used in a while, you might need to prime it by spraying a few puffs into the air.</li>
+        </ul>
+      </li>
+      <li>Position Yourself:
+        <ul>
+          <li>Sit up or stand up straight to ensure your lungs can fully expand.</li>
+          <li>Breathe out fully to empty your lungs.</li>
+        </ul>
+      </li>
+      <li>Position the Inhaler:
+        <ul>
+          <li>Without a Spacer:
+            <ul>
+              <li>Place the mouthpiece of the inhaler into your mouth, sealing your lips around it.</li>
+            </ul>
+          </li>
+          <li>With a Spacer:
+            <ul>
+              <li>Attach the spacer to the inhaler and place the mouthpiece of the spacer into your mouth, sealing your lips around it.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Inhale the Medication:
+        <ul>
+          <li>Press down on the inhaler to release a dose of medication while simultaneously taking a slow, deep breath in.</li>
+          <li>If using a spacer, press down on the inhaler and then take a slow, deep breath in through the spacer.</li>
+          <li>Continue to inhale slowly and deeply to ensure the medication reaches your lungs.</li>
+        </ul>
+      </li>
+      <li>Hold Your Breath:
+        <ul>
+          <li>Hold your breath for about 10 seconds to allow the medication to settle in your lungs.</li>
+          <li>Exhale slowly through your mouth or nose.</li>
+        </ul>
+      </li>
+      <li>Repeat if Necessary:
+        <ul>
+          <li>If you need a second dose, wait about 30 seconds to 1 minute between puffs.</li>
+          <li>Shake the inhaler again and repeat the steps.</li>
+        </ul>
+      </li>
+      <li>After Using the Inhaler:
+        <ul>
+          <li>Replace the cap on the inhaler.</li>
+          <li>If the inhaler contains a steroid medication, rinse your mouth with water and spit it out to prevent oral thrush (a fungal infection).</li>
+        </ul>
+      </li>
+    </ol>
+    <h4>Tips for Using an Inhaler:</h4>
+    <ul>
+      <li>Use a Spacer: If you have difficulty coordinating the inhaler puff and your breath, use a spacer. It helps ensure more medication reaches your lungs.</li>
+      <li>Check Dosage Counter: Some inhalers have a dosage counter. Keep track of the doses left to know when to get a refill.</li>
+      <li>Clean the Inhaler: Regularly clean the mouthpiece and spacer to prevent medication buildup and ensure proper functioning.</li>
+      <li>Practice Proper Technique: Make sure you are using the correct technique. Ask your healthcare provider to watch and guide you if needed.</li>
+    </ul>
+  </CardContent>
+</Card>
+
+<Card>
+<CardImage src="/images/nebu2.jpg" alt="Blood Pressure Machine" />
+  <CardHeader>Nebulizer</CardHeader>
+  <CardContent>
+    <ol>
+      <li>Prepare the Equipment:
+        <ul>
+          <li>Wash your hands with soap and water to prevent contamination.</li>
+          <li>Ensure all parts of the nebulizer are clean and dry before assembly.</li>
+          <li>Plug in the nebulizer compressor or ensure it has sufficient battery charge if it's a portable model.</li>
+        </ul>
+      </li>
+      <li>Assemble the Nebulizer:
+        <ul>
+          <li>Attach the air tubing to the air outlet on the compressor.</li>
+          <li>Connect the other end of the tubing to the base of the nebulizer cup.</li>
+          <li>Open the nebulizer cup and place the prescribed medication inside. Make sure you use the exact amount prescribed by your doctor.</li>
+          <li>Reassemble the nebulizer cup securely.</li>
+        </ul>
+      </li>
+      <li>Attach the Mouthpiece or Mask:
+        <ul>
+          <li>Attach the mouthpiece or mask to the top of the nebulizer cup. Use a mouthpiece if possible, as it delivers more medication to the lungs. Use a mask if the mouthpiece is not suitable, especially for young children or those who cannot hold the mouthpiece.</li>
+        </ul>
+      </li>
+      <li>Position Yourself:
+        <ul>
+          <li>Sit in a comfortable, upright position to allow your lungs to fully expand.</li>
+          <li>Place the mouthpiece in your mouth and close your lips around it. If using a mask, place it over your nose and mouth, securing it with the elastic band.</li>
+        </ul>
+      </li>
+      <li>Turn on the Nebulizer:
+        <ul>
+          <li>Turn on the compressor by pressing the power button.</li>
+          <li>You should see a fine mist coming from the mouthpiece or mask.</li>
+        </ul>
+      </li>
+      <li>Inhale the Medication:
+        <ul>
+          <li>Breathe in slowly and deeply through your mouth if using a mouthpiece, or through your nose and mouth if using a mask.</li>
+          <li>Hold each breath for 2-3 seconds before exhaling to allow the medication to settle in your lungs.</li>
+          <li>Continue breathing slowly and deeply until all the medication in the nebulizer cup is used up. This usually takes about 10-15 minutes.</li>
+        </ul>
+      </li>
+    </ol>
+  </CardContent>
+</Card>
+
+<Card>
+<CardImage src="/images/cpr.png" alt="Blood Pressure Machine" />
+  <CardHeader>CPR</CardHeader>
+  <CardContent>
+    <ol>
+      <li>Assess the Scene:
+        <ul>
+          <li>Ensure the area is safe for both you and the person needing CPR.</li>
+          <li>Check for any hazards or dangers that could harm you or the person.</li>
+        </ul>
+      </li>
+      <li>Check Responsiveness:
+        <ul>
+          <li>Tap the person on the shoulder and shout loudly, "Are you okay?" Check for any response, such as movement or sound.</li>
+        </ul>
+      </li>
+      <li>Call for Help:
+        <ul>
+          <li>If there is no response, or if the person is not breathing normally (gasping or not breathing at all), immediately call emergency services (911 or local emergency number) for help.</li>
+          <li>If there is someone nearby, ask them to call for help and bring an AED (Automated External Defibrillator), if available.</li>
+        </ul>
+      </li>
+      <li>Open the Airway:
+        <ul>
+          <li>Gently tilt the person's head back and lift the chin to open the airway. This helps ensure clear passage for air to enter and exit the lungs.</li>
+        </ul>
+      </li>
+      <li>Check for Breathing:
+        <ul>
+          <li>Look, listen, and feel for signs of normal breathing. Watch for chest rise, listen for breathing sounds, and feel for breath on your cheek.</li>
+          <li>If the person is not breathing normally, proceed to CPR.</li>
+        </ul>
+      </li>
+      <li>Begin Chest Compressions:
+        <ul>
+          <li>Place the heel of one hand on the center of the person's chest, between the nipples.</li>
+          <li>Place your other hand on top of the first hand, interlocking your fingers.</li>
+          <li>Position your shoulders directly above your hands, with elbows locked.</li>
+          <li>Push down hard and fast, compressing the chest at least 2 inches (5 centimeters) deep for adult and adolescent victims. Allow the chest to recoil completely between compressions.</li>
+          <li>Perform chest compressions at a rate of 100-120 compressions per minute, to the beat of a song like "Stayin' Alive" by the Bee Gees.</li>
+        </ul>
+      </li>
+      <li>Perform Rescue Breaths:
+        <ul>
+          <li>After 30 chest compressions, give 2 rescue breaths.</li>
+          <li>Pinch the person's nose shut and cover their mouth with yours, creating an airtight seal.</li>
+          <li>Breathe into the person's mouth for about 1 second, watching for chest rise. If the chest does not rise, reposition the head and try again.</li>
+          <li>Continue with cycles of 30 chest compressions and 2 rescue breaths until help arrives, an AED is available, or the person starts breathing normally.</li>
+        </ul>
+      </li>
+    </ol>
+  </CardContent>
+</Card>
+
+<Card>
+<CardImage src="/images/ecg.jpeg" alt="Blood Pressure Machine" />
+  <CardHeader>ECG</CardHeader>
+  <CardContent>
+    <ol>
+      <li>Preparation:
+        <ul>
+          <li>Ensure the patient is relaxed and in a comfortable position, either sitting or lying down.</li>
+          <li>Clean the skin where the electrodes will be placed to remove any oils or dirt. Use an alcohol wipe if necessary.</li>
+        </ul>
+      </li>
+      <li>Electrode Placement:
+        <ul>
+          <li>Place the electrodes on the patient's skin as per the standard ECG lead placement (usually 10 electrodes: 4 limb leads and 6 precordial leads).</li>
+          <li>Limb Leads:
+            <ul>
+              <li>Right arm (RA): On the right wrist or upper arm.</li>
+              <li>Left arm (LA): On the left wrist or upper arm.</li>
+              <li>Right leg (RL): On the right ankle or lower leg (ground lead).</li>
+              <li>Left leg (LL): On the left ankle or lower leg.</li>
+            </ul>
+          </li>
+          <li>Precordial Leads (V1-V6):
+            <ul>
+              <li>V1: Fourth intercostal space to the right of the sternum.</li>
+              <li>V2: Fourth intercostal space to the left of the sternum.</li>
+              <li>V3: Midway between V2 and V4.</li>
+              <li>V4: Fifth intercostal space at the midclavicular line.</li>
+              <li>V5: Level with V4 at the left anterior axillary line.</li>
+              <li>V6: Level with V4 at the left midaxillary line.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Connect the Leads:
+        <ul>
+          <li>Attach the lead wires to the electrodes, ensuring each lead is connected to its corresponding electrode.</li>
+        </ul>
+      </li>
+      <li>Start the ECG Recording:
+        <ul>
+          <li>Turn on the ECG machine or monitoring device.</li>
+          <li>Ensure the machine is set to the appropriate mode (12-lead ECG, continuous monitoring, etc.).</li>
+          <li>Press the start button to begin recording the ECG.</li>
+          <li>Encourage the patient to remain still and avoid talking during the recording to reduce artifacts.</li>
+        </ul>
+      </li>
+      <li>Monitor the ECG Trace:
+        <ul>
+          <li>Observe the ECG trace on the screen for any abnormalities or technical issues (e.g., loose electrodes, interference).</li>
+          <li>If the trace is not clear, recheck the electrode placement and connections.</li>
+        </ul>
+      </li>
+      <li>End the Recording:
+        <ul>
+          <li>Once the recording is complete, stop the ECG machine.</li>
+          <li>Print or save the ECG trace as needed for further analysis or review by a healthcare professional.</li>
+        </ul>
+      </li>
+      <li>Remove the Electrodes:
+        <ul>
+          <li>Gently remove the electrodes from the patient's skin.</li>
+          <li>Clean any residue left by the electrodes with a mild soap and water or an alcohol wipe.</li>
+        </ul>
+      </li>
+    </ol>
+  </CardContent>
+</Card>
       
       {/* New 4 cards */}
       <Card>
-        <CardImage src="path/to/blood-pressure-machine-image.jpg" alt="Blood Pressure Machine" />
+        <CardImage src="/images/bpm.jpg" alt="Blood Pressure Machine" />
         <CardHeader>Blood Pressure Machine</CardHeader>
         <CardContent>
           <ol>
@@ -115,7 +325,7 @@ const General = () => {
         </CardContent>
       </Card>
       <Card>
-        <CardImage src="path/to/oximeter-image.jpg" alt="Oximeter" />
+        <CardImage src="/images/oximeter.jpg" alt="Oximeter" />
         <CardHeader>Oximeter</CardHeader>
         <CardContent>
           <ol>
@@ -158,7 +368,7 @@ const General = () => {
         </CardContent>
       </Card>
       <Card>
-        <CardImage src="path/to/thermometer-image.jpg" alt="Digital Thermometer" />
+        <CardImage src="/images/ther.jpg" alt="Digital Thermometer" />
         <CardHeader>Digital Thermometer</CardHeader>
         <CardContent>
           <ol>
@@ -218,7 +428,7 @@ const General = () => {
         </CardContent>
       </Card>
       <Card>
-        <CardImage src="path/to/oxygen-cylinder-image.jpg" alt="Oxygen Cylinder" />
+        <CardImage src="/images/oxycil.jpg" alt="Oxygen Cylinder" />
         <CardHeader>Oxygen Cylinder</CardHeader>
         <CardContent>
           <ol>

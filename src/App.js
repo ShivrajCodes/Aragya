@@ -13,7 +13,9 @@ const AppContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  width: 100vw; /* Ensures it covers the full viewport width */
+  min-height: 100vh; /* Ensures it covers at least the full viewport height */
+  overflow: hidden; /* Prevents scrolling if content overflows */
   transition: all 0.3s;
   position: relative;
   display: flex;
@@ -35,6 +37,14 @@ const AppContainer = styled.div`
 const ContentWrapper = styled.div`
   position: relative;
   z-index: 2; /* Ensure the content is above the overlay */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+`;
+
+const ScrollableContent = styled.div`
+  flex: 1;
+  overflow-y: auto; /* Enables vertical scrolling */
 `;
 
 const Navbar = styled.nav`
@@ -136,6 +146,7 @@ const MenuItems = styled.div`
 
 const PageContainer = styled.div`
   transition: all 0.3s;
+  padding: 20px; /* Add some padding for better appearance */
 `;
 
 const App = () => {
@@ -144,7 +155,7 @@ const App = () => {
   const navigate = useNavigate();
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prevState => !prevState);
   };
 
   const handleNavigation = async (e, path) => {
@@ -153,6 +164,7 @@ const App = () => {
     await new Promise((r) => setTimeout(r, 200));
     setIsTransitioning(false);
     navigate(path);
+    setIsMenuOpen(false); // Close the menu on navigation
   };
 
   return (
@@ -166,7 +178,6 @@ const App = () => {
         <Navbar>
           <LogoWrapper>
             <Logo src="/images/uem3.png" alt="UEM Logo" />
-           
             <Logo src="/images/logo2.png" alt="ARAGYA Logo" />
             <BrandName>ARAGYA</BrandName>
           </LogoWrapper>
@@ -186,16 +197,17 @@ const App = () => {
             <Navlink to="/contact" onClick={(e) => handleNavigation(e, '/contact')}>
               About Us
             </Navlink>
-            
           </MenuItems>
         </Navbar>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<PageContainer><About /></PageContainer>} />
-          <Route path="/blog" element={<PageContainer><Blog /></PageContainer>} />
-          <Route path="/contact" element={<PageContainer><Contact /></PageContainer>} />
-          <Route path="/general" element={<PageContainer><General /></PageContainer>} />
-        </Routes>
+        <ScrollableContent>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<PageContainer><About /></PageContainer>} />
+            <Route path="/blog" element={<PageContainer><Blog /></PageContainer>} />
+            <Route path="/contact" element={<PageContainer><Contact /></PageContainer>} />
+            <Route path="/general" element={<PageContainer><General /></PageContainer>} />
+          </Routes>
+        </ScrollableContent>
       </ContentWrapper>
     </AppContainer>
   );

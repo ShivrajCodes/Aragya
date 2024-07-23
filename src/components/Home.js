@@ -328,7 +328,7 @@ const Home = ({ isDarkMode }) => {
         <Card>
           <UserImage src="/images/aratrika.png" alt="User" />
           <UserName>Aratrika Shome</UserName>
-          <ReviewText>QCVSS has revolutionized our patient care approach. The continuous monitoring and data logging capabilities are top-notch.</ReviewText>
+          <ReviewText>I recently used the QVCSS system for my routine health check-ups, and I must say, it exceeded my expectations. The integration of advanced technology with healthcare services provided a seamless experience. The user interface is intuitive, making it easy for even the non-tech-savvy individuals to navigate through various features. The real-time syncing of vital signs to my doctor's office ensured quick and accurate diagnosis. I highly recommend QVCSS to anyone looking for reliable and efficient healthcare solutions.</ReviewText>
           <StarRating>
             <Star>★</Star><Star>★</Star><Star>★</Star><Star>★</Star><Star>☆</Star>
           </StarRating>
@@ -336,7 +336,7 @@ const Home = ({ isDarkMode }) => {
         <Card>
           <UserImage src="/images/riddhiraj.jpeg" alt="User" />
           <UserName>Riddhiraj Chanda</UserName>
-          <ReviewText>The portability and accuracy of QCVSS are unmatched. It's an indispensable tool in our healthcare facility.</ReviewText>
+          <ReviewText>QVCSS has truly revolutionized my healthcare experience. The system's ability to synchronize vital signs with my healthcare provider in real-time has been a game-changer. I appreciate the ease of use and the prompt notifications regarding my health status. The peace of mind knowing my doctor is always updated with my latest health data is invaluable. QVCSS is a must-have for anyone serious about their health and wellness. Highly satisfied with the service!</ReviewText>
           <StarRating>
             <Star>★</Star><Star>★</Star><Star>★</Star><Star>★</Star><Star>★</Star>
           </StarRating>

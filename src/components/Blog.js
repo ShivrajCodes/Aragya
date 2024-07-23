@@ -85,6 +85,22 @@ const Blog = () => {
           <h3 style={styles.cardTitle}>Viewing Display Screens</h3>
           <p style={styles.cardText}>The display screens show the real-time data from the ECG and oximeter sensors. The ECG screen displays the heart's electrical activity in the form of a waveform, while the oximeter screen shows the oxygen level and pulse rate. These visual representations help in continuous monitoring and analysis of the patient's condition.</p>
         </div>
+
+    <div style={styles.card}>
+      <img src="/images/arduino_uno.png" alt="Arduino Uno" style={styles.cardImage} />
+      <h3 style={styles.cardTitle}>Arduino Uno</h3>
+      <p style={styles.cardText}>
+        Arduino Uno is a microcontroller board based on the ATmega328P. It is widely used for building digital devices and interactive objects that can sense and control physical devices. In this project, the Arduino Uno can be used to collect and process data from various sensors, controlling displays, and managing communication between different modules.
+      </p>
+    </div>
+
+    <div style={styles.card}>
+      <img src="/images/arduino_nano.png" alt="Arduino Nano" style={styles.cardImage} />
+      <h3 style={styles.cardTitle}>Arduino Nano</h3>
+      <p style={styles.cardText}>
+        Arduino Nano is a small, complete, and breadboard-friendly board based on the ATmega328P. It offers the same functionality as the Arduino Uno but in a smaller form factor. The Nano is ideal for compact projects where space is limited. In this project, it can be used for precise control and data acquisition from various sensors due to its small size and flexibility.
+      </p>
+    </div>
       </div>
     </div>
   );
