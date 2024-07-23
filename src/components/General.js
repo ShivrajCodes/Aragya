@@ -213,72 +213,55 @@ const General = () => {
 </Card>
 
 <Card>
-<CardImage src="/images/ecg.jpeg" alt="Blood Pressure Machine" />
-  <CardHeader>ECG</CardHeader>
-  <CardContent>
-    <ol>
-      <li>Preparation:
-        <ul>
-          <li>Ensure the patient is relaxed and in a comfortable position, either sitting or lying down.</li>
-          <li>Clean the skin where the electrodes will be placed to remove any oils or dirt. Use an alcohol wipe if necessary.</li>
-        </ul>
-      </li>
-      <li>Electrode Placement:
-        <ul>
-          <li>Place the electrodes on the patient's skin as per the standard ECG lead placement (usually 10 electrodes: 4 limb leads and 6 precordial leads).</li>
-          <li>Limb Leads:
-            <ul>
-              <li>Right arm (RA): On the right wrist or upper arm.</li>
-              <li>Left arm (LA): On the left wrist or upper arm.</li>
-              <li>Right leg (RL): On the right ankle or lower leg (ground lead).</li>
-              <li>Left leg (LL): On the left ankle or lower leg.</li>
-            </ul>
-          </li>
-          <li>Precordial Leads (V1-V6):
-            <ul>
-              <li>V1: Fourth intercostal space to the right of the sternum.</li>
-              <li>V2: Fourth intercostal space to the left of the sternum.</li>
-              <li>V3: Midway between V2 and V4.</li>
-              <li>V4: Fifth intercostal space at the midclavicular line.</li>
-              <li>V5: Level with V4 at the left anterior axillary line.</li>
-              <li>V6: Level with V4 at the left midaxillary line.</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Connect the Leads:
-        <ul>
-          <li>Attach the lead wires to the electrodes, ensuring each lead is connected to its corresponding electrode.</li>
-        </ul>
-      </li>
-      <li>Start the ECG Recording:
-        <ul>
-          <li>Turn on the ECG machine or monitoring device.</li>
-          <li>Ensure the machine is set to the appropriate mode (12-lead ECG, continuous monitoring, etc.).</li>
-          <li>Press the start button to begin recording the ECG.</li>
-          <li>Encourage the patient to remain still and avoid talking during the recording to reduce artifacts.</li>
-        </ul>
-      </li>
-      <li>Monitor the ECG Trace:
-        <ul>
-          <li>Observe the ECG trace on the screen for any abnormalities or technical issues (e.g., loose electrodes, interference).</li>
-          <li>If the trace is not clear, recheck the electrode placement and connections.</li>
-        </ul>
-      </li>
-      <li>End the Recording:
-        <ul>
-          <li>Once the recording is complete, stop the ECG machine.</li>
-          <li>Print or save the ECG trace as needed for further analysis or review by a healthcare professional.</li>
-        </ul>
-      </li>
-      <li>Remove the Electrodes:
-        <ul>
-          <li>Gently remove the electrodes from the patient's skin.</li>
-          <li>Clean any residue left by the electrodes with a mild soap and water or an alcohol wipe.</li>
-        </ul>
-      </li>
-    </ol>
-  </CardContent>
+<CardImage src="/images/firstaid.jpg" alt="Blood Pressure Machine" />
+<CardHeader>First Aid</CardHeader>
+<CardContent>
+  <ol>
+    <li>Assess the Scene:
+      <ul>
+        <li>Ensure the area is safe for both you and the injured person. Check for any hazards or dangers.</li>
+        <li>Put on gloves if available to protect yourself from bodily fluids and potential infections.</li>
+      </ul>
+    </li>
+    <li>Check the Person:
+      <ul>
+        <li>Assess the person’s level of consciousness. Tap their shoulders and ask loudly, "Are you okay?"</li>
+        <li>If there is no response, shout for help and call emergency services (911 or local emergency number).</li>
+      </ul>
+    </li>
+    <li>Provide Comfort:
+      <ul>
+        <li>Reassure the person and keep them calm. Let them know help is on the way.</li>
+      </ul>
+    </li>
+    <li>Perform Initial Assessment (ABCs):
+      <ul>
+        <li>Airway: Ensure the person's airway is open and clear. If not, tilt their head back and lift the chin to open the airway.</li>
+        <li>Breathing: Check for breathing. Look, listen, and feel for chest rise and breaths for up to 10 seconds.</li>
+        <li>Circulation: Check for signs of circulation (pulse or movement) and severe bleeding.</li>
+      </ul>
+    </li>
+    <li>Specific First Aid Techniques:
+      <ul>
+        <li>CPR (Cardiopulmonary Resuscitation):
+          <ul>
+            <li>If the person is unconscious and not breathing normally, begin CPR immediately. Perform chest compressions and rescue breaths (if trained) until help arrives.</li>
+            <li>Follow the steps outlined earlier for CPR.</li>
+          </ul>
+        </li>
+        <li>Choking:
+          <ul>
+            <li>If the person is conscious but choking and unable to speak or breathe, perform abdominal thrusts (Heimlich maneuver).</li>
+            <li>Stand behind the person, wrap your arms around their waist, and make a fist with one hand.</li>
+            <li>Place the thumb side of your fist against the person's abdomen, slightly above the navel and below the rib cage.</li>
+            <li>Grasp your fist with your other hand and perform quick, upward thrusts until the object is expelled or the person becomes unconscious.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ol>
+</CardContent>
+
 </Card>
       
       {/* New 4 cards */}

@@ -1,5 +1,6 @@
+// App.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, NavLink, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
 import About from './components/About';
@@ -7,15 +8,16 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Home from './components/Home';
 import General from './components/General';
+import Navbar from './components/Navbar';
 
 const AppContainer = styled.div`
   background-image: url('/images/images.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100vw; /* Ensures it covers the full viewport width */
-  min-height: 100vh; /* Ensures it covers at least the full viewport height */
-  overflow: hidden; /* Prevents scrolling if content overflows */
+  width: 100vw; 
+  min-height: 100vh; 
+  overflow: hidden; 
   transition: all 0.3s;
   position: relative;
   display: flex;
@@ -29,14 +31,14 @@ const AppContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.6); /* White overlay with 60% opacity */
+    background-color: rgba(255, 255, 255, 0.6); 
     z-index: 1;
   }
 `;
 
 const ContentWrapper = styled.div`
   position: relative;
-  z-index: 2; /* Ensure the content is above the overlay */
+  z-index: 2; 
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -44,161 +46,21 @@ const ContentWrapper = styled.div`
 
 const ScrollableContent = styled.div`
   flex: 1;
-  overflow-y: auto; /* Enables vertical scrolling */
-`;
-
-const Navbar = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: #020024; /* Background color to match the provided design */
-  border-bottom: 1px solid #eaeaea;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`;
-
-const LogoWrapper = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const Logo = styled.img`
-  height: 40px;
-  margin-right: 20px;
-`;
-
-const PlaceholderLogo = styled.div`
-  height: 40px;
-  width: 40px;
-  background-color: #ccc; /* Placeholder color */
-  border-radius: 50%;
-`;
-
-const BrandName = styled.span`
-  color: #b3b3b3; /* Color to match the provided design */
-  font-size: 24px;
-  font-weight: 700;
-  margin-left: 10px;
-`;
-
-const Navlink = styled(NavLink)`
-  margin: 0 20px;
-  text-decoration: none;
-  color: #b3b3b3; /* Color to match the provided design */
-  font-size: 18px;
-  font-weight: 500;
-  position: relative;
-
-  &.active {
-    color: red; /* Active color to match the provided design */
-  }
-
-  &:hover {
-    color: #ffffff;
-  }
-
-  @media (max-width: 768px) {
-    margin: 10px 0;
-  }
-`;
-
-const MenuButton = styled.div`
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 1001;
-
-  @media (min-width: 769px) {
-    display: none;
-  }
-`;
-
-const MenuIcon = styled.div`
-  width: 25px;
-  height: 3px;
-  background-color: #ffffff; /* White color for the menu icon */
-  margin: 4px 0;
-`;
-
-const MenuItems = styled.div`
-  display: ${({ isMenuOpen }) => (isMenuOpen ? 'block' : 'none')};
-
-  @media (max-width: 768px) {
-    width: 100%;
-    text-align: left;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-  }
+  overflow-y: auto; 
 `;
 
 const PageContainer = styled.div`
   transition: all 0.3s;
-  padding: 20px; /* Add some padding for better appearance */
+  padding: 20px; 
 `;
 
 const App = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
-
-  const toggleMenu = () => {
-    setIsMenuOpen(prevState => !prevState);
-  };
-
-  const handleNavigation = async (e, path) => {
-    e.preventDefault();
-    setIsTransitioning(true);
-    await new Promise((r) => setTimeout(r, 200));
-    setIsTransitioning(false);
-    navigate(path);
-    setIsMenuOpen(false); // Close the menu on navigation
-  };
 
   return (
     <AppContainer>
       <ContentWrapper>
-        <MenuButton onClick={toggleMenu}>
-          <MenuIcon />
-          <MenuIcon />
-          <MenuIcon />
-        </MenuButton>
-        <Navbar>
-          <LogoWrapper>
-            <Logo src="/images/uem3.png" alt="UEM Logo" />
-            <Logo src="/images/logo2.png" alt="ARAGYA Logo" />
-            <BrandName>ARAGYA</BrandName>
-          </LogoWrapper>
-          <MenuItems isMenuOpen={isMenuOpen || window.innerWidth > 768}>
-            <Navlink to="/" onClick={(e) => handleNavigation(e, '/')}>
-              Home
-            </Navlink>
-            <Navlink to="/about" onClick={(e) => handleNavigation(e, '/about')}>
-              Instructions
-            </Navlink>
-            <Navlink to="/blog" onClick={(e) => handleNavigation(e, '/blog')}>
-              Components Used
-            </Navlink>
-            <Navlink to="/general" onClick={(e) => handleNavigation(e, '/general')}>
-              General Information
-            </Navlink>
-            <Navlink to="/contact" onClick={(e) => handleNavigation(e, '/contact')}>
-              About Us
-            </Navlink>
-          </MenuItems>
-        </Navbar>
+        <Navbar />
         <ScrollableContent>
           <Routes>
             <Route path="/" element={<Home />} />
