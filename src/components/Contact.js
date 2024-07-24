@@ -99,7 +99,7 @@ const Contact = () => {
       img: '/images/sandipan.jpg',
       linkedin: 'https://www.linkedin.com/in/sandipan-dubey-2314442ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       twitter: 'https://twitter.com/sandipan',
-      instagram: 'https://instagram.com/sandipan',
+      instagram: 'https://www.instagram.com/lucifercount004/?hl=en',
     },
     {
       name: 'Soham Aich',
@@ -108,14 +108,14 @@ const Contact = () => {
       img: '/images/soham.jpg',
       linkedin: 'https://www.linkedin.com/in/soham-aich-36a712292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       twitter: 'https://twitter.com/soham',
-      instagram: 'https://instagram.com/soham',
+      instagram: 'https://www.instagram.com/aich__soham/?hl=en',
     },
     {
       name: 'Ritam Das',
       role: 'Developer',
       handle: '@Aragya',
       img: '/images/ritam.jpg',
-      linkedin: 'https://www.linkedin.com/in/ritam-das-30874628a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      linkedin: 'https://www.instagram.com/r_1_d_x_codec/?hl=en',
       twitter: 'https://twitter.com/ritam',
       instagram: 'https://instagram.com/ritam',
     },
@@ -126,7 +126,7 @@ const Contact = () => {
       img: '/images/srijeeta.jpg',
       linkedin: 'https://www.linkedin.com/in/srijeeta-das-0a6a33292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       twitter: 'https://twitter.com/srijeeta',
-      instagram: 'https://instagram.com/srijeeta',
+      instagram: 'https://www.instagram.com/_insane_soul.___/?hl=en',
     },
   ];
 
