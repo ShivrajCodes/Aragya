@@ -26,12 +26,12 @@ To clone and run this project locally, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/quadra-care-vital-sync.git
+    git clone https://github.com/your-username/Aragya.git
     ```
 
 2. **Navigate to the project directory**:
     ```bash
-    cd quadra-care-vital-sync
+    cd Aragya
     ```
 
 3. **Install dependencies**:
