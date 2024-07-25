@@ -25,25 +25,25 @@ const Blog = () => {
       borderRadius: '8px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       transition: 'transform 0.2s',
+      height: '600px', // Set a fixed height for the cards
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
     },
     cardImage: {
       width: '100%',
-      height: 'auto',
+      height: '400px', // Set the desired height for the image
+      objectFit: 'cover', // Maintain aspect ratio and cover the area
       borderRadius: '8px 8px 0 0',
     },
-    cardTitle: {
-      fontSize: '1.5em',
-      margin: '20px 0 10px',
-    },
-    cardText: {
-      fontSize: '1em',
-    },
-    '@media (max-width: 768px)': {
-      card: {
-        flex: '1 1 100%',
-      },
+    cardContent: {
+      flex: '1',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
     },
   };
+  
 
   return (
     <div style={styles.blog}>
@@ -101,9 +101,7 @@ const Blog = () => {
         Arduino Nano is a small, complete, and breadboard-friendly board based on the ATmega328P. It offers the same functionality as the Arduino Uno but in a smaller form factor. The Nano is ideal for compact projects where space is limited. In this project, it can be used for precise control and data acquisition from various sensors due to its small size and flexibility.
       </p>
     </div>
-    Here are the additional divs for the Bluetooth module (HC-05), L298 motor driver, DFplayer mini, and OLED display:
-
-```javascript
+    
 <div style={styles.card}>
   <img src="/images/hc05.png" alt="Bluetooth Module (HC-05)" style={styles.cardImage} />
   <h3 style={styles.cardTitle}>Bluetooth Module (HC-05)</h3>
@@ -129,7 +127,7 @@ const Blog = () => {
 </div>
 
 <div style={styles.card}>
-  <img src="/images/oled.png" alt="OLED Display" style={styles.cardImage} />
+  <img src="/images/oled2.png" alt="OLED Display" style={styles.cardImage} />
   <h3 style={styles.cardTitle}>OLED Display</h3>
   <p style={styles.cardText}>
     The OLED display is used to show information with high contrast and clarity. It is ideal for displaying text, graphics, and real-time data from sensors in compact projects due to its slim profile and low power consumption.
