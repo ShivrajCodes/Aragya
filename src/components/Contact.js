@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const Contact = () => {
   const styles = {
@@ -35,6 +36,9 @@ const Contact = () => {
       transition: 'transform 0.3s',
       color: 'white',
       overflow: 'hidden',
+    },
+    cardHover: {
+      transform: 'scale(1.05)',
     },
     img: {
       width: '80%',
@@ -98,7 +102,7 @@ const Contact = () => {
       handle: '@Aragya',
       img: '/images/sandipan.jpg',
       linkedin: 'https://www.linkedin.com/in/sandipan-dubey-2314442ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-      twitter: 'https://twitter.com/sandipan',
+      github: 'https://github.com/sandipan',
       instagram: 'https://www.instagram.com/lucifercount004/?hl=en',
     },
     {
@@ -107,7 +111,7 @@ const Contact = () => {
       handle: '@Aragya',
       img: '/images/soham.jpg',
       linkedin: 'https://www.linkedin.com/in/soham-aich-36a712292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-      twitter: 'https://twitter.com/soham',
+      github: 'https://github.com/soham',
       instagram: 'https://www.instagram.com/aich__soham/?hl=en',
     },
     {
@@ -115,9 +119,9 @@ const Contact = () => {
       role: 'Developer',
       handle: '@Aragya',
       img: '/images/ritam.jpg',
-      linkedin: 'https://www.instagram.com/r_1_d_x_codec/?hl=en',
-      twitter: 'https://twitter.com/ritam',
-      instagram: 'https://instagram.com/ritam',
+      linkedin: 'https://www.linkedin.com/in/ritam-das-0a6a33292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      github: 'https://github.com/ritam',
+      instagram: 'https://www.instagram.com/r_1_d_x_codec/?hl=en',
     },
     {
       name: 'Srijeeta Das',
@@ -125,7 +129,7 @@ const Contact = () => {
       handle: '@Aragya',
       img: '/images/srijeeta.jpg',
       linkedin: 'https://www.linkedin.com/in/srijeeta-das-0a6a33292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-      twitter: 'https://twitter.com/srijeeta',
+      github: 'https://github.com/srijeeta',
       instagram: 'https://www.instagram.com/_insane_soul.___/?hl=en',
     },
   ];
@@ -136,14 +140,14 @@ const Contact = () => {
       <p style={styles.p}>PRESENTING THE MEMBERS, WHOSE CONTRIBUTIONS HAVE MADE THE PROJECT A GRAND SUCCESS</p>
       <div style={styles.cardContainer}>
         {people.map((person, index) => (
-          <div key={index} style={styles.card}>
+          <div key={index} style={styles.card} className="card">
             <div style={styles.badge}>{person.role}</div>
             <div style={styles.iconBox}>
               <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
                 <FaLinkedin style={styles.icon} />
               </a>
-              <a href={person.twitter} target="_blank" rel="noopener noreferrer">
-                <FaTwitter style={styles.icon} />
+              <a href={person.github} target="_blank" rel="noopener noreferrer">
+                <FaGithub style={styles.icon} />
               </a>
               <a href={person.instagram} target="_blank" rel="noopener noreferrer">
                 <FaInstagram style={styles.icon} />

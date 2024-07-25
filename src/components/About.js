@@ -13,6 +13,12 @@ const Blog = () => {
       fontSize: '1.2em',
       lineHeight: '1.6',
     },
+    img: {
+      display: 'block',
+      margin: '20px 0',
+      maxWidth: '100%',
+      height: 'auto',
+    },
   };
 
   return (
@@ -31,6 +37,8 @@ const Blog = () => {
       <h3 style={styles.h2}>Instructions for Use:</h3>
       <p style={styles.p}><b>1. Setting Up the ECG Electrodes:</b><br />
         - Placement: Place the ECG electrodes on the patient’s skin. Recommended positions are on the chest around the heart area.<br />
+        <img src="/images/elec.jpg" alt="ECG Electrodes Placement" style={{...styles.img, width: 400, height: 300}} />
+
         - Connection: Connect the electrodes to the AD8232 sensor using the provided cables. Ensure the connections are secure to avoid signal loss.<br />
         <b>2. Using the ECG Mechanism (AD8232 Sensor):</b><br />
         - Initialization: Power on the AD8232 sensor and ensure it is properly connected to the display screen.<br />

@@ -25,15 +25,15 @@ const Blog = () => {
       borderRadius: '8px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       transition: 'transform 0.2s',
-      height: '600px', // Set a fixed height for the cards
+      height: '600px', 
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
     },
     cardImage: {
       width: '100%',
-      height: '400px', // Set the desired height for the image
-      objectFit: 'cover', // Maintain aspect ratio and cover the area
+      height: '800px', 
+      objectFit: 'cover', 
       borderRadius: '8px 8px 0 0',
     },
     cardContent: {
@@ -69,7 +69,7 @@ const Blog = () => {
         </div>
         
         <div style={styles.card}>
-          <img src="/images/ambu-bag.png" alt="Ambu Bag" style={styles.cardImage} />
+          <img src="/images/ambu2.png" alt="Ambu Bag" style={{...styles.cardImage, width: 500, height: 300}} />
           <h3 style={styles.cardTitle}>Ambu Bag with Stepper Motor and Hinge/Shaft Mechanism</h3>
           <p style={styles.cardText}>The Ambu bag, connected to a stepper motor and hinge/shaft mechanism, is used for providing artificial ventilation to patients. The stepper motor automates the compression and release of the Ambu bag, ensuring a steady and controlled airflow to the patient.</p>
         </div>
@@ -133,7 +133,7 @@ const Blog = () => {
     The OLED display is used to show information with high contrast and clarity. It is ideal for displaying text, graphics, and real-time data from sensors in compact projects due to its slim profile and low power consumption.
   </p>
 </div>
-```
+
       </div>
     </div>
   );
