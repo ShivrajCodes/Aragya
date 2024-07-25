@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 const NavbarContainer = styled.nav`
@@ -44,9 +43,11 @@ const Navlink = styled(NavLink)`
   font-size: 18px;
   font-weight: 500;
   position: relative;
+  transition: color 0.3s ease;
 
   &.active {
     color: red; 
+    text-shadow: 0 0 10px red; /* Shine effect */
   }
 
   &:hover {
@@ -93,19 +94,62 @@ const MenuItems = styled.div`
   }
 `;
 
+const DropdownContainer = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+const DropdownContent = styled.div`
+  display: ${({ isDropdownOpen }) => (isDropdownOpen ? 'block' : 'none')};
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #3e8e41;
+    }
+  }
+`;
+
+const Arrow = styled.span`
+  margin-left: 5px;
+`;
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(prevState => !prevState);
   };
 
+  const toggleDropdown = () => {
+    setIsDropdownOpen(prevState => !prevState);
+  };
+
   const handleNavigation = async (e, path) => {
     e.preventDefault();
     setIsMenuOpen(false);
+    setIsDropdownOpen(false);
     navigate(path);
   };
+
+  const isGeneralInformationActive = location.pathname.startsWith('/general') || location.pathname.startsWith('/parameters');
 
   return (
     <>
@@ -130,9 +174,19 @@ const Navbar = () => {
           <Navlink to="/blog" onClick={(e) => handleNavigation(e, '/blog')}>
             Components Used
           </Navlink>
-          <Navlink to="/general" onClick={(e) => handleNavigation(e, '/general')}>
-            General Information
-          </Navlink>
+          <DropdownContainer>
+            <Navlink to="#" onClick={(e) => { e.preventDefault(); toggleDropdown(); }} className={isGeneralInformationActive ? 'active' : ''}>
+              General Information<Arrow>▼</Arrow>
+            </Navlink>
+            <DropdownContent isDropdownOpen={isDropdownOpen}>
+              <button onClick={(e) => handleNavigation(e, '/general')}>
+                VIEW GENERAL INFORMATION
+              </button>
+              <button onClick={(e) => handleNavigation(e, '/parameters')}>
+                VIEW PARAMETERS
+              </button>
+            </DropdownContent>
+          </DropdownContainer>
           <Navlink to="/contact" onClick={(e) => handleNavigation(e, '/contact')}>
             About Us
           </Navlink>

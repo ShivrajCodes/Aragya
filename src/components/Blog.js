@@ -101,6 +101,41 @@ const Blog = () => {
         Arduino Nano is a small, complete, and breadboard-friendly board based on the ATmega328P. It offers the same functionality as the Arduino Uno but in a smaller form factor. The Nano is ideal for compact projects where space is limited. In this project, it can be used for precise control and data acquisition from various sensors due to its small size and flexibility.
       </p>
     </div>
+    Here are the additional divs for the Bluetooth module (HC-05), L298 motor driver, DFplayer mini, and OLED display:
+
+```javascript
+<div style={styles.card}>
+  <img src="/images/hc05.png" alt="Bluetooth Module (HC-05)" style={styles.cardImage} />
+  <h3 style={styles.cardTitle}>Bluetooth Module (HC-05)</h3>
+  <p style={styles.cardText}>
+    The HC-05 Bluetooth module is used for wireless communication. It enables the project to send and receive data from other Bluetooth-enabled devices, facilitating remote monitoring and control.
+  </p>
+</div>
+
+<div style={styles.card}>
+  <img src="/images/l298.png" alt="L298 Motor Driver" style={styles.cardImage} />
+  <h3 style={styles.cardTitle}>L298 Motor Driver</h3>
+  <p style={styles.cardText}>
+    The L298 motor driver is used to control the speed and direction of DC motors. It can drive two motors independently and is essential for projects involving motorized components, providing the necessary current and control signals.
+  </p>
+</div>
+
+<div style={styles.card}>
+  <img src="/images/dfp.png" alt="DFplayer Mini" style={styles.cardImage} />
+  <h3 style={styles.cardTitle}>DFplayer Mini</h3>
+  <p style={styles.cardText}>
+    The DFplayer Mini is a small MP3 player module that can play audio files stored on a microSD card. It is used in projects requiring audio playback, such as voice prompts, alerts, or background music.
+  </p>
+</div>
+
+<div style={styles.card}>
+  <img src="/images/oled.png" alt="OLED Display" style={styles.cardImage} />
+  <h3 style={styles.cardTitle}>OLED Display</h3>
+  <p style={styles.cardText}>
+    The OLED display is used to show information with high contrast and clarity. It is ideal for displaying text, graphics, and real-time data from sensors in compact projects due to its slim profile and low power consumption.
+  </p>
+</div>
+```
       </div>
     </div>
   );
