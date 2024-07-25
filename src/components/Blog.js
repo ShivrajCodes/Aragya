@@ -10,6 +10,7 @@ const Blog = () => {
     h2: {
       fontSize: '2.5em',
       marginBottom: '20px',
+      textAlign: 'center',
     },
     cardContainer: {
       display: 'flex',
@@ -25,25 +26,27 @@ const Blog = () => {
       borderRadius: '8px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       transition: 'transform 0.2s',
-      height: '600px', 
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
     },
     cardImage: {
       width: '100%',
-      height: '800px', 
+      height: '200px', 
       objectFit: 'cover', 
       borderRadius: '8px 8px 0 0',
     },
-    cardContent: {
-      flex: '1',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
+    cardTitle: {
+      fontSize: '1.5em',
+      marginTop: '10px',
+      marginBottom: '10px',
+    },
+    cardText: {
+      fontSize: '1em',
+      lineHeight: '1.5',
+      marginBottom: '10px',
     },
   };
-  
 
   return (
     <div style={styles.blog}>
@@ -69,7 +72,7 @@ const Blog = () => {
         </div>
         
         <div style={styles.card}>
-          <img src="/images/ambu2.png" alt="Ambu Bag" style={{...styles.cardImage, width: 500, height: 300}} />
+          <img src="/images/ambu2.png" alt="Ambu Bag" style={{...styles.cardImage, height: '200px'}} />
           <h3 style={styles.cardTitle}>Ambu Bag with Stepper Motor and Hinge/Shaft Mechanism</h3>
           <p style={styles.cardText}>The Ambu bag, connected to a stepper motor and hinge/shaft mechanism, is used for providing artificial ventilation to patients. The stepper motor automates the compression and release of the Ambu bag, ensuring a steady and controlled airflow to the patient.</p>
         </div>
@@ -86,53 +89,53 @@ const Blog = () => {
           <p style={styles.cardText}>The display screens show the real-time data from the ECG and oximeter sensors. The ECG screen displays the heart's electrical activity in the form of a waveform, while the oximeter screen shows the oxygen level and pulse rate. These visual representations help in continuous monitoring and analysis of the patient's condition.</p>
         </div>
 
-    <div style={styles.card}>
-      <img src="/images/arduino_uno.png" alt="Arduino Uno" style={styles.cardImage} />
-      <h3 style={styles.cardTitle}>Arduino Uno</h3>
-      <p style={styles.cardText}>
-        Arduino Uno is a microcontroller board based on the ATmega328P. It is widely used for building digital devices and interactive objects that can sense and control physical devices. In this project, the Arduino Uno can be used to collect and process data from various sensors, controlling displays, and managing communication between different modules.
-      </p>
-    </div>
+        <div style={styles.card}>
+          <img src="/images/arduino_uno.png" alt="Arduino Uno" style={styles.cardImage} />
+          <h3 style={styles.cardTitle}>Arduino Uno</h3>
+          <p style={styles.cardText}>
+            Arduino Uno is a microcontroller board based on the ATmega328P. It is widely used for building digital devices and interactive objects that can sense and control physical devices. In this project, the Arduino Uno can be used to collect and process data from various sensors, controlling displays, and managing communication between different modules.
+          </p>
+        </div>
 
-    <div style={styles.card}>
-      <img src="/images/arduino_nano.png" alt="Arduino Nano" style={styles.cardImage} />
-      <h3 style={styles.cardTitle}>Arduino Nano</h3>
-      <p style={styles.cardText}>
-        Arduino Nano is a small, complete, and breadboard-friendly board based on the ATmega328P. It offers the same functionality as the Arduino Uno but in a smaller form factor. The Nano is ideal for compact projects where space is limited. In this project, it can be used for precise control and data acquisition from various sensors due to its small size and flexibility.
-      </p>
-    </div>
-    
-<div style={styles.card}>
-  <img src="/images/hc05.png" alt="Bluetooth Module (HC-05)" style={styles.cardImage} />
-  <h3 style={styles.cardTitle}>Bluetooth Module (HC-05)</h3>
-  <p style={styles.cardText}>
-    The HC-05 Bluetooth module is used for wireless communication. It enables the project to send and receive data from other Bluetooth-enabled devices, facilitating remote monitoring and control.
-  </p>
-</div>
+        <div style={styles.card}>
+          <img src="/images/arduino_nano.png" alt="Arduino Nano" style={styles.cardImage} />
+          <h3 style={styles.cardTitle}>Arduino Nano</h3>
+          <p style={styles.cardText}>
+            Arduino Nano is a small, complete, and breadboard-friendly board based on the ATmega328P. It offers the same functionality as the Arduino Uno but in a smaller form factor. The Nano is ideal for compact projects where space is limited. In this project, it can be used for precise control and data acquisition from various sensors due to its small size and flexibility.
+          </p>
+        </div>
+        
+        <div style={styles.card}>
+          <img src="/images/hc05.png" alt="Bluetooth Module (HC-05)" style={styles.cardImage} />
+          <h3 style={styles.cardTitle}>Bluetooth Module (HC-05)</h3>
+          <p style={styles.cardText}>
+            The HC-05 Bluetooth module is used for wireless communication. It enables the project to send and receive data from other Bluetooth-enabled devices, facilitating remote monitoring and control.
+          </p>
+        </div>
 
-<div style={styles.card}>
-  <img src="/images/l298.png" alt="L298 Motor Driver" style={styles.cardImage} />
-  <h3 style={styles.cardTitle}>L298 Motor Driver</h3>
-  <p style={styles.cardText}>
-    The L298 motor driver is used to control the speed and direction of DC motors. It can drive two motors independently and is essential for projects involving motorized components, providing the necessary current and control signals.
-  </p>
-</div>
+        <div style={styles.card}>
+          <img src="/images/l298.png" alt="L298 Motor Driver" style={styles.cardImage} />
+          <h3 style={styles.cardTitle}>L298 Motor Driver</h3>
+          <p style={styles.cardText}>
+            The L298 motor driver is used to control the speed and direction of DC motors. It can drive two motors independently and is essential for projects involving motorized components, providing the necessary current and control signals.
+          </p>
+        </div>
 
-<div style={styles.card}>
-  <img src="/images/dfp.png" alt="DFplayer Mini" style={styles.cardImage} />
-  <h3 style={styles.cardTitle}>DFplayer Mini</h3>
-  <p style={styles.cardText}>
-    The DFplayer Mini is a small MP3 player module that can play audio files stored on a microSD card. It is used in projects requiring audio playback, such as voice prompts, alerts, or background music.
-  </p>
-</div>
+        <div style={styles.card}>
+          <img src="/images/dfp.png" alt="DFplayer Mini" style={styles.cardImage} />
+          <h3 style={styles.cardTitle}>DFplayer Mini</h3>
+          <p style={styles.cardText}>
+            The DFplayer Mini is a small MP3 player module that can play audio files stored on a microSD card. It is used in projects requiring audio playback, such as voice prompts, alerts, or background music.
+          </p>
+        </div>
 
-<div style={styles.card}>
-  <img src="/images/oled2.png" alt="OLED Display" style={styles.cardImage} />
-  <h3 style={styles.cardTitle}>OLED Display</h3>
-  <p style={styles.cardText}>
-    The OLED display is used to show information with high contrast and clarity. It is ideal for displaying text, graphics, and real-time data from sensors in compact projects due to its slim profile and low power consumption.
-  </p>
-</div>
+        <div style={styles.card}>
+          <img src="/images/oled2.png" alt="OLED Display" style={styles.cardImage} />
+          <h3 style={styles.cardTitle}>OLED Display</h3>
+          <p style={styles.cardText}>
+            The OLED display is used to show information with high contrast and clarity. It is ideal for displaying text, graphics, and real-time data from sensors in compact projects due to its slim profile and low power consumption.
+          </p>
+        </div>
 
       </div>
     </div>
