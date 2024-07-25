@@ -59,6 +59,29 @@ const Navlink = styled(NavLink)`
   }
 `;
 
+const NavlinkGreen = styled(NavLink)`
+  margin: 0 20px;
+  text-decoration: none;
+  color: green; 
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+
+  &.active {
+    color: red; 
+    text-shadow: 0 0 10px red; /* Shine effect */
+  }
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    margin: 10px 0;
+  }
+`;
+
 const MenuButton = styled.div`
   position: absolute;
   top: 10px;
@@ -175,12 +198,12 @@ const Navbar = () => {
             Components Used
           </Navlink>
           <DropdownContainer>
-            <Navlink to="#" onClick={(e) => { e.preventDefault(); toggleDropdown(); }} className={isGeneralInformationActive ? 'active' : ''}>
+            <NavlinkGreen to="#" onClick={(e) => { e.preventDefault(); toggleDropdown(); }} className={isGeneralInformationActive ? 'active' : ''}>
               General Information<Arrow>▼</Arrow>
-            </Navlink>
+            </NavlinkGreen>
             <DropdownContent isDropdownOpen={isDropdownOpen}>
               <button onClick={(e) => handleNavigation(e, '/general')}>
-                VIEW GENERAL INFORMATION
+                VIEW EMERGENCY USAGE
               </button>
               <button onClick={(e) => handleNavigation(e, '/parameters')}>
                 VIEW PARAMETERS

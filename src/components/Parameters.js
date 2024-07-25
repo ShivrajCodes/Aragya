@@ -63,7 +63,7 @@ const Parameters = () => {
         <thead>
           <tr>
             <Th>PARAMETERS</Th>
-            <Th>EXACT RATE</Th>
+            <Th>HEALTHY VALUE</Th>
             <Th>ABNORMAL RATE</Th>
           </tr>
         </thead>
