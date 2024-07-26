@@ -7,8 +7,9 @@ import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Home from './components/Home';
 import General from './components/General';
-import Parameters from './components/Parameters'; // Import the Parameters component
+import Parameters from './components/Parameters';
 import Navbar from './components/Navbar';
+import Modal from './components/Modal';
 
 const AppContainer = styled.div`
   background-image: url('/images/images.png');
@@ -68,10 +69,11 @@ const App = () => {
             <Route path="/blog" element={<PageContainer><Blog /></PageContainer>} />
             <Route path="/contact" element={<PageContainer><Contact /></PageContainer>} />
             <Route path="/general" element={<PageContainer><General /></PageContainer>} />
-            <Route path="/parameters" element={<PageContainer><Parameters /></PageContainer>} /> {/* Add the Parameters route */}
+            <Route path="/parameters" element={<PageContainer><Parameters /></PageContainer>} />
           </Routes>
         </ScrollableContent>
       </ContentWrapper>
+      <Modal />
     </AppContainer>
   );
 };
