@@ -18,6 +18,21 @@ const ModalButton = styled.button`
   bottom: 20px;
   right: 20px;
   z-index: 1001;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 const Iframe = styled.iframe`
@@ -36,7 +51,7 @@ const Modal = () => {
   return (
     <>
       <ModalButton onClick={toggleModal}>
-        <img src="/images/image.png" alt="Open Modal" />
+        <img src="/images/modal.png" alt="Open Modal" />
       </ModalButton>
       <ModalContainer isOpen={isOpen}>
         <Iframe src="http://127.0.0.1:500" />
