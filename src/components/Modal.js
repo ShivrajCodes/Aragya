@@ -54,7 +54,7 @@ const Modal = () => {
         <img src="/images/modal.png" alt="Open Modal" />
       </ModalButton>
       <ModalContainer isOpen={isOpen}>
-        <Iframe src="http://127.0.0.1:500" />
+        <Iframe src="https://codessoham.github.io/health2/" />
       </ModalContainer>
     </>
   );
