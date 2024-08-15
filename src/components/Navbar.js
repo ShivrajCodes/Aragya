@@ -70,7 +70,7 @@ const NavlinkGreen = styled(NavLink)`
 
   &.active {
     color: red; 
-    text-shadow: 0 0 10px red; /* Shine effect */
+    text-shadow: 0 0 10px red; 
   }
 
   &:hover {
